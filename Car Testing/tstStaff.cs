@@ -1,5 +1,4 @@
 ﻿using System;
-using CarClasses;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Car_Testing
