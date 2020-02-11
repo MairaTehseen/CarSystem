@@ -9,8 +9,8 @@ namespace Car_Testing
         [TestMethod]
         public void InstanceOK()
         {
-            clsCars AnCars = new clsCars();
-            Assert.IsNotNull(AnCars);
+            //clsCars AnCars = new clsCars();
+            //Assert.IsNotNull(AnCars);
         }
     }
 }
