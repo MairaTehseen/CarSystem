@@ -7,9 +7,10 @@ namespace Car_Testing
     public class tstStock
     {
         [TestMethod]
-        public void TestMethod1()
+        public void InstanceOK()
         {
-
+            clsStock AStock = new clsStock();
+            Assert.IsNotNull(AStock);
         }
     }
 }
