@@ -29,7 +29,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CarFrontOffice", "CarFrontO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarClasses", "CarClasses\CarClasses.csproj", "{2B9E22F7-17C1-42C5-B88F-9992EFD35905}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car Testing", "Car Testing\Car Testing.csproj", "{F578E645-2B2D-4D1D-898B-4CAA9EB494A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarTesting", "Car Testing\CarTesting.csproj", "{F578E645-2B2D-4D1D-898B-4CAA9EB494A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
