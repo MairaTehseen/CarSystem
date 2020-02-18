@@ -33,10 +33,6 @@ namespace CarClasses
                 Error = "The customer first name must not be blank";
             }
 
-
-
-
-
             return Error;
             
         }
