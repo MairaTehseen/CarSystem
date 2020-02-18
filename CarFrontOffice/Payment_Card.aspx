@@ -44,6 +44,10 @@
             
         </div>
             </div>
+        <div style="float:none">
+        <asp:Button ID="Button1" runat="server" Text="Confirm" OnClick="Button1_Click" />
+            </div>
+        <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="Button2_Click" />
         
     </form>
 </body>
