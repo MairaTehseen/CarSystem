@@ -52,6 +52,7 @@
     <Compile Include="clsCars.cs" />
     <Compile Include="tstPayment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tstPaymentCardsCollection.cs" />
     <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
