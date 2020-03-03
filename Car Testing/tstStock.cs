@@ -4,13 +4,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Car_Testing
 {
     [TestClass]
-    public class UnitTest1
+    public class tstStock
     {
         [TestMethod]
         public void InstanceOK()
         {
-            clsCars AnCars = new clsCars();
-            Assert.IsNotNull(AnCars);
+            clsStock AStock = new clsStock();
+            Assert.IsNotNull(AStock);
         }
     }
 }
