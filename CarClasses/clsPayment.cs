@@ -1,26 +1,32 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace CarClasses
 {
-    public class clsPayment
+    public class clsCounty
     {
-        public bool Active { get; set; }
-        public DateTime PaymentDate { get; set; }
+        public string County { get; set; }
+
         public int CountyNo { get; set; }
-        public string Payment_Customer_Id { get; set; }
-        public string PaymentMethod { get; set; }
-        public string PaymentId { get; set; }
-        public int AddressNo { get; set; }
-        public string PaymentOrderId { get; set; }
 
-        public bool Find(int addressNo)
+        public string Valid(string someCounty)
         {
-            throw new NotImplementedException();
-        }
-
-        public string Valid(string payment_Customer_Id, string paymentId, string paymentOrderId, string paymentMethod, string paymentDate)
-        {
-            throw new NotImplementedException();
+            //string variable to store the error message
+            string Error = "";
+            //if the name of the county is more than 50 characters
+            if (someCounty.Length > 50)
+            {
+                //return an error message
+                Error = "The county name cannot have more than 50 characters";
+            }
+            if (someCounty.Length == 0)
+            {
+                //return an error message
+                Error = "The county name may not be blank!";
+            }
+            return Error;
         }
     }
 }
