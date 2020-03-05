@@ -19,7 +19,7 @@ namespace CarClasses
             //object for data connection
             clsDataConnection DB = new clsDataConnection();
             //execute the stored procedure
-            DB.Execute("sproc_tblAddress_SelectAll");
+            DB.Execute("sproc_tblPaymentCardsCollection");
             //populate the array list with the data table
             PopulateArray(DB);
         }
@@ -42,14 +42,13 @@ namespace CarClasses
                 //create a blank address
                 clsAddress AnAddress = new clsAddress();
                 //read in the fields from the current record
-                AnAddress.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
-                AnAddress.AddressNo = Convert.ToInt32(DB.DataTable.Rows[Index]["AddressNo"]);
-                AnAddress.CountyNo = Convert.ToInt32(DB.DataTable.Rows[Index]["CountyNo"]);
-                AnAddress.DateAdded = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAdded"]);
-                AnAddress.HouseNo = Convert.ToString(DB.DataTable.Rows[Index]["HouseNo"]);
-                AnAddress.PostCode = Convert.ToString(DB.DataTable.Rows[Index]["PostCode"]);
-                AnAddress.Street = Convert.ToString(DB.DataTable.Rows[Index]["Street"]);
-                AnAddress.Town = Convert.ToString(DB.DataTable.Rows[Index]["Town"]);
+                
+                AnAddress.AddressNo = Convert.ToInt32(DB.DataTable.Rows[Index]["CardId"]);
+                AnAddress.Street = Convert.ToString(DB.DataTable.Rows[Index]["CardHolder"]);
+                AnAddress.CountyNo = Convert.ToInt64(DB.DataTable.Rows[Index]["CardNr"]);
+                AnAddress.DateAdded = Convert.ToDateTime(DB.DataTable.Rows[Index]["CardExpiryDate"]);
+                AnAddress.HouseNo = Convert.ToString(DB.DataTable.Rows[Index]["CardSecurityNr"]);
+
                 //add the record to the private data mamber
                 mAddressList.Add(AnAddress);
                 //point at the next record

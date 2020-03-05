@@ -17,7 +17,7 @@ public partial class PayMenu : System.Web.UI.Page
             //set the name of the primary key
             lstAddresses.DataValueField = "AddressNo";
             //set the data field to display
-            lstAddresses.DataTextField = "PostCode";
+            lstAddresses.DataTextField = "Street";
             //bind the data to the list
             lstAddresses.DataBind();
         

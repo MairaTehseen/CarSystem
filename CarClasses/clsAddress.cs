@@ -20,7 +20,7 @@ namespace CarClasses
         //private data member for post code
         private string mPostCode;
         //private data member for county no
-        private Int32 mCountyNo;
+        private Int64 mCountyNo;
         //private date added data member
         private DateTime mDateAdded;
         //private data member for active
@@ -72,7 +72,7 @@ namespace CarClasses
         }
 
         //public property for county no
-        public int CountyNo
+        public long CountyNo
         {
             get
             {
