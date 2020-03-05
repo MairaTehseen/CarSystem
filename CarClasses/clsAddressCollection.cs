@@ -45,7 +45,7 @@ namespace CarClasses
                 
                 AnAddress.AddressNo = Convert.ToInt32(DB.DataTable.Rows[Index]["CardId"]);
                 AnAddress.Street = Convert.ToString(DB.DataTable.Rows[Index]["CardHolder"]);
-                AnAddress.CountyNo = Convert.ToInt64(DB.DataTable.Rows[Index]["CardNr"]);
+                AnAddress.CountyNo = Convert.ToInt64(DB.DataTable.Rows[Index]["CardN"]);
                 AnAddress.DateAdded = Convert.ToDateTime(DB.DataTable.Rows[Index]["CardExpiryDate"]);
                 AnAddress.HouseNo = Convert.ToString(DB.DataTable.Rows[Index]["CardSecurityNr"]);
 
