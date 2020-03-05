@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Car Company</title>
+    <title>Car Company - About</title>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
 </head>
 <body style="margin:0px;background-color:white; padding:0px;height: 100%;">
@@ -19,9 +19,13 @@
                         <asp:LinkButton style="text-decoration: none;font-size: 22px;font-family: 'Britannic Bold'; color: rgb(255, 255, 255); line-height: 1.2; " ID="HOME" runat="server" OnClick="HOME_Click">HOME</asp:LinkButton>
                       </div>
                     <div style="width:10%;text-align:center;padding-top:20px;float:left"> 
-                        <asp:LinkButton style="text-decoration: none;font-size: 22px;font-family: 'Britannic Bold'; color: rgb(255, 255, 255); line-height: 1.2; " ID="ABOUT" runat="server" OnClick="ABOUT_Click">ABOUT</asp:LinkButton>
+                        <asp:LinkButton style="text-decoration: none;font-size: 22px;font-family: 'Britannic Bold'; color: rgb(125, 125, 125); line-height: 1.2; " ID="ABOUT" runat="server" OnClick="ABOUT_Click">ABOUT</asp:LinkButton>
                       </div>
-                    <div style="width:10%;text-align:center;padding-top:20px;float:left"> 
+                    <div style="                            width: 10%;
+                            text-align: center;
+                            padding-top: 20px;
+                            float: left
+                    "> 
                         <asp:LinkButton style="text-decoration: none;font-size: 22px;font-family: 'Britannic Bold'; color: rgb(255, 255, 255); line-height: 1.2; " ID="CONTACT" runat="server" OnClick="CONTACT_Click">CONTACT</asp:LinkButton>
                       </div>
                     <div style="width:30%;text-align:center;padding-top:20px;float:left"> 
