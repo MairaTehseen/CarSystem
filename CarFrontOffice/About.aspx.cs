@@ -5,14 +5,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class HomePage : System.Web.UI.Page
+public partial class About : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
 
     }
-
-
 
     protected void HOME_Click(object sender, EventArgs e)
     {
@@ -43,6 +41,4 @@ public partial class HomePage : System.Web.UI.Page
     {
         Response.Redirect("Login.aspx");
     }
-
-    
 }

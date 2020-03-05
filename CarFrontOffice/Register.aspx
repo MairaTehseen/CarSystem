@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="HomePage.aspx.cs" Inherits="HomePage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="Register" %>
 
 <!DOCTYPE html>
 
@@ -45,7 +45,3 @@
     </form>
 </body>
 </html>
-
-
-
-
