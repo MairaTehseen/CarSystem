@@ -9,7 +9,7 @@ public partial class Register : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (CarClasses.Loggedin.session == 0)
+        if (CarClasses.clsLoggedin.session == 0)
         {
             Label1.Visible = false;
             LOGOUT.Visible = false;
@@ -24,6 +24,10 @@ public partial class Register : System.Web.UI.Page
             Settings.Visible = true;
             PaymentDetails.Visible = true;
             Basket.Visible = true;
+            if (CarClasses.clsLoggedin.staff == 1)
+            {
+                StaffRegisterBTN.Visible = true;
+            }
         }
 
     }
@@ -56,5 +60,12 @@ public partial class Register : System.Web.UI.Page
     protected void LOGIN_Click(object sender, EventArgs e)
     {
         Response.Redirect("Login.aspx");
+    }
+
+    protected void LOGOUT_Click(object sender, EventArgs e)
+    {
+        CarClasses.clsLoggedin.session = 0; 
+
+        
     }
 }

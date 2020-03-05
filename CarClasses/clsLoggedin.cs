@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace CarClasses
 {
-    public class Loggedin
+    public class clsLoggedin
     {
-        public static int session { get; private set; }
-        
+        public static int session { get; set; }
+        public static int staff { get; set; }
     }
+
+    
+    
 }
+

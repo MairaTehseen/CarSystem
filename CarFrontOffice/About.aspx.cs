@@ -9,7 +9,7 @@ public partial class About : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (CarClasses.Loggedin.session == 0)
+        if (CarClasses.clsLoggedin.session == 0)
         {
             Label1.Visible = false;
             LOGOUT.Visible = false;
@@ -56,5 +56,10 @@ public partial class About : System.Web.UI.Page
     protected void LOGIN_Click(object sender, EventArgs e)
     {
         Response.Redirect("Login.aspx");
+    }
+
+    protected void LOGOUT_Click(object sender, EventArgs e)
+    {
+        CarClasses.clsLoggedin.session = 0;
     }
 }

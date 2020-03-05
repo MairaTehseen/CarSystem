@@ -13,7 +13,7 @@ public partial class HomePage : System.Web.UI.Page
     {
         
         
-    if (CarClasses.Loggedin.session == 0) { 
+    if (CarClasses.clsLoggedin.session == 0) { 
         Label1.Visible = false;
         LOGOUT.Visible = false;
         Settings.Visible = false; 
@@ -63,5 +63,11 @@ public partial class HomePage : System.Web.UI.Page
         Response.Redirect("Login.aspx");
     }
 
-    
+
+
+    protected void LOGOUT_Click(object sender, EventArgs e)
+    {
+        CarClasses.clsLoggedin.session = 0;
+      
+    }
 }

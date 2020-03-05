@@ -6,6 +6,20 @@
 <head runat="server">
     <title>Car Company - Register</title>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <style type="text/css">
+        
+        .auto-style1 {
+            height: ;
+        }
+        
+        .auto-style2 {
+            height: 23px;
+        }
+        .auto-style3 {
+            height: 30px;
+        }
+        
+    </style>
 </head>
 <body style="margin:0px;background-color:white; padding:0px;height: 100%;">
     
@@ -56,12 +70,92 @@
                         </div>
 
                         <div style="text-align:center;float:none;height:25px;padding-top:10px;">
-                        <asp:LinkButton style="text-decoration: none;font-family: 'Britannic Bold'; color:firebrick" ID="LOGOUT" runat="server">Logout</asp:LinkButton>
+                        <asp:LinkButton style="text-decoration: none;font-family: 'Britannic Bold'; color:firebrick" ID="LOGOUT" runat="server" OnClick="LOGOUT_Click">Logout</asp:LinkButton>
                         </div>
                     </div>
                 </div>
                 </div>
             </div>
+
+
+          
+        <table>
+            <tr>
+                <td align="right">First Name : </td>
+                <td>
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Last Name :</td>
+                <td>
+                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Country :</td>
+                <td>
+                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">City :</td>
+                <td>
+                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Street :</td>
+                <td>
+                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" align="right">House Number :</td>
+                <td class="auto-style1">
+                    <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" align="right">Post Code :</td>
+                <td class="auto-style1">
+                    <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" align="right">User Name :</td>
+                <td class="auto-style1">
+                    <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" align="right">Password#1 :</td>
+                <td class="auto-style1">
+                    <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" align="right">Password#2 :</td>
+                <td class="auto-style1">
+                    <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right">E-Mail Address:</td>
+                <td class="auto-style2">
+                    <asp:TextBox ID="TextBox11" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3" align="right">
+                    <asp:Button ID="RegisterBTN" runat="server" Text="Register" />
+                </td>
+                <td class="auto-style3">
+                   
+                    <asp:Button ID="StaffRegisterBTN" runat="server" Text="Register As Staff" Visible="False" />
+                </td>
+            </tr>
+        </table>
 
 
           
