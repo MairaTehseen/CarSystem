@@ -30,12 +30,39 @@
                         <asp:LinkButton style="text-decoration: none;font-size: 22px;font-family: 'Britannic Bold'; color: rgb(255, 255, 255); line-height: 1.2; " ID="REGISTER" runat="server" OnClick="REGISTER_Click" >REGISTER</asp:LinkButton>
                       </div>
                     <div style="width:10%;text-align:center;padding-top:20px;float:left"> 
-                        <asp:LinkButton style="text-decoration: none;font-size: 22px;font-family: 'Britannic Bold'; color: rgb(255, 255, 255); line-height: 1.2; " ID="SETTINGS" runat="server" OnClick="SETTINGS_Click">SETTINGS</asp:LinkButton>
+                        
                       </div>
                     <div style="width:10%;text-align:center;padding-top:20px;float:left"> 
                         <asp:LinkButton style="text-decoration: none;font-size: 22px;font-family: 'Britannic Bold'; color: rgb(255, 255, 255); line-height: 1.2; " ID="LOGIN" runat="server" OnClick="LOGIN_Click">LOGIN</asp:LinkButton>
                       </div>
                     <div style="width:5%;text-align:center;padding-top:20px;float:left"> </div>
+
+
+                    <div id="MENULOGIN" style="width:25%;position:absolute;left:5%;top:80px;"> 
+                        <div  style="text-align:center;width:100%;height:25px">
+                        <asp:Label style="font-family: 'Britannic Bold'; color:aliceblue" ID="Label1" runat="server" Text="Logged in as :"></asp:Label>
+                        </div>
+
+                        <div style="float:none;width:100%;height:25px;text-align:center;display: flex;justify-content:space-between">
+                            <div style="float:left">
+                        <asp:LinkButton style="text-decoration: none;font-family: 'Britannic Bold'; color:aliceblue" ID="PaymentDetails" runat="server">  Payment  </asp:LinkButton>
+                        </div>
+                            <div style="float:left">
+                            <asp:LinkButton style="text-decoration: none; font-family: 'Britannic Bold'; color: aliceblue" ID="Basket" runat="server">  Basket </asp:LinkButton>
+                           </div>
+                            <div style="float:left">
+                            <asp:LinkButton style="text-decoration: none;font-family: 'Britannic Bold'; color:aliceblue" ID="Settings" runat="server"> Settings </asp:LinkButton>
+                        </div>
+
+
+                        </div>
+
+                        <div style="text-align:center;float:none;width:100%;height:25px">
+                        <asp:LinkButton style="text-decoration: none;font-family: 'Britannic Bold'; color:firebrick" ID="LOGOUT" runat="server">Logout</asp:LinkButton>
+                        </div>
+                    </div>
+
+
                 </div>
                 </div>
             </div>

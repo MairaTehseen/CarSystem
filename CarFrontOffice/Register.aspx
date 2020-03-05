@@ -30,16 +30,15 @@
                         <asp:LinkButton style="text-decoration: none;font-size: 22px;font-family: 'Britannic Bold'; color: rgb(125, 125, 125); line-height: 1.2; " ID="REGISTER" runat="server" OnClick="REGISTER_Click" >REGISTER</asp:LinkButton>
                       </div>
                     <div style="width:10%;text-align:center;padding-top:20px;float:left"> 
-                        <asp:LinkButton style="                                text-decoration: none;
-                                font-size: 22px;
-                                font-family: 'Britannic Bold';
-                                color: rgb(255, 255, 255);
-                                line-height: 1.2;" ID="SETTINGS" runat="server" OnClick="SETTINGS_Click">SETTINGS</asp:LinkButton>
+                        <asp:LinkButton style="text-decoration: none;font-size: 22px;font-family: 'Britannic Bold';color: rgb(255, 255, 255);line-height: 1.2;" ID="SETTINGS" runat="server" OnClick="SETTINGS_Click">SETTINGS</asp:LinkButton>
                       </div>
                     <div style="width:10%;text-align:center;padding-top:20px;float:left"> 
                         <asp:LinkButton style="text-decoration: none;font-size: 22px;font-family: 'Britannic Bold'; color: rgb(255, 255, 255); line-height: 1.2; " ID="LOGIN" runat="server" OnClick="LOGIN_Click">LOGIN</asp:LinkButton>
                       </div>
                     <div style="width:5%;text-align:center;padding-top:20px;float:left"> </div>
+                    <div style="width:100%;text-align:center;float:left"> 
+                        <asp:Label style="font-family: 'Britannic Bold'; color:aliceblue" ID="Label1" runat="server" Text="Logged in as :"></asp:Label>
+                    </div>
                 </div>
                 </div>
             </div>
