@@ -25,7 +25,7 @@
             </div>
 
         <div style="width:50%;float:left">
-        <div style="width:50%;float:left"><asp:ListBox ID="ListBox2" runat="server" Width="100%"></asp:ListBox></div>
+        <div style="width:50%;float:left"><asp:ListBox ID="lstAddresses" runat="server" Width="100%"></asp:ListBox></div>
 
            <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button1" runat="server" Text="Add new"  /></div>
              <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button2" runat="server" Text="Edit"  /></div>

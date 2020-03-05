@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsAddress.cs" />
-    <Compile Include="clsAddressCollectio.cs" />
     <Compile Include="clsAddressCollection.cs" />
     <Compile Include="clsDataConnection.cs" />
     <Compile Include="clsPayment.cs" />
