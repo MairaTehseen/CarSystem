@@ -7,13 +7,13 @@ using System.Web.UI.WebControls;
 
 public partial class HomePage : System.Web.UI.Page
 {
-    public int LOGGEDIN { get; private set; }
+    
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
-
-    if (LOGGEDIN == 0) { 
+        
+        
+    if (CarClasses.Loggedin.session == 0) { 
         Label1.Visible = false;
         LOGOUT.Visible = false;
         Settings.Visible = false; 

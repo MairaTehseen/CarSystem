@@ -9,7 +9,23 @@ public partial class Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        
+        if (CarClasses.Loggedin.session == 0)
+        {
+            Label1.Visible = false;
+            LOGOUT.Visible = false;
+            Settings.Visible = false;
+            PaymentDetails.Visible = false;
+            Basket.Visible = false;
+        }
+        else
+        {
+            Label1.Visible = true;
+            LOGOUT.Visible = true;
+            Settings.Visible = true;
+            PaymentDetails.Visible = true;
+            Basket.Visible = true;
+        }
     }
 
     protected void HOME_Click(object sender, EventArgs e)
