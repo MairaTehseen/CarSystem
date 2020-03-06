@@ -9,7 +9,7 @@ namespace CarClasses
     public class  clsUsersAndStaffCollection
     {
 
-        public static void AddUser(string first,string last, string country, string city, string street, string house, string post, string user, string pass, string email)
+        public static void AddUser(string first,string last, string country, string city, string street, int house, string post, string user, string pass, string email)
         {
             //update an existing record based on the values of thisAddress
             //connect to the database
@@ -27,10 +27,10 @@ namespace CarClasses
             DB.AddParameter("@Email", email);
            
             //execute the stored procedure
-            DB.Execute("sproc_tblAddress_Update");
+            DB.Execute("AddUserProcedure");
         }
 
-        public static void AddStaff(string first, string last, string country, string city, string street, string house, string post, string user, string pass, string email)
+        public static void AddStaff(string first, string last, string country, string city, string street, int house, string post, string user, string pass, string email)
         {
             //update an existing record based on the values of thisAddress
             //connect to the database
@@ -48,7 +48,7 @@ namespace CarClasses
             DB.AddParameter("@Email", email);
 
             //execute the stored procedure
-            DB.Execute("sproc_tblAddress_Update");
+            DB.Execute("AddStaffProcedure");
         }
 
     }

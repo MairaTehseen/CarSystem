@@ -76,7 +76,7 @@ public partial class Register : System.Web.UI.Page
         string cr = TextBoxcr.Text;
         string ct = TextBoxct.Text;
         string st = TextBoxst.Text;
-        string hn = TextBoxhn.Text;
+        int hn = int.Parse(TextBoxhn.Text);
         string pc = TextBoxpc.Text;
         string un = TextBoxun.Text;
         string p1 = TextBoxp1.Text;
@@ -94,7 +94,7 @@ public partial class Register : System.Web.UI.Page
         string cr = TextBoxcr.Text;
         string ct = TextBoxct.Text;
         string st = TextBoxst.Text;
-        string hn = TextBoxhn.Text;
+        int hn = int.Parse(TextBoxhn.Text);
         string pc = TextBoxpc.Text;
         string un = TextBoxun.Text;
         string p1 = TextBoxp1.Text;
