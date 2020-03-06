@@ -68,4 +68,38 @@ public partial class Register : System.Web.UI.Page
 
 
     }
+
+    protected void RegisterBTN_Click(object sender, EventArgs e)
+    {
+        string fn = TextBoxfn.Text;
+        string ln = TextBoxln.Text;
+        string cr = TextBoxcr.Text;
+        string ct = TextBoxct.Text;
+        string st = TextBoxst.Text;
+        string hn = TextBoxhn.Text;
+        string pc = TextBoxpc.Text;
+        string un = TextBoxun.Text;
+        string p1 = TextBoxp1.Text;
+        string ea = TextBoxea.Text;
+
+        CarClasses.clsUsersAndStaffCollection.AddUser(fn,ln,cr,ct,st,hn,pc,un,p1,ea);
+       
+    }
+
+    protected void StaffRegisterBTN_Click(object sender, EventArgs e)
+    {
+
+        string fn = TextBoxfn.Text;
+        string ln = TextBoxln.Text;
+        string cr = TextBoxcr.Text;
+        string ct = TextBoxct.Text;
+        string st = TextBoxst.Text;
+        string hn = TextBoxhn.Text;
+        string pc = TextBoxpc.Text;
+        string un = TextBoxun.Text;
+        string p1 = TextBoxp1.Text;
+        string ea = TextBoxea.Text;
+
+        CarClasses.clsUsersAndStaffCollection.AddStaff(fn, ln, cr, ct, st, hn, pc, un, p1, ea);
+    }
 }
