@@ -10,9 +10,21 @@ namespace CarClasses
     {
         public static int session { get; set; }
         public static int staff { get; set; }
+
+        public static void clsLogout()
+        {
+            if (session != 0 )
+            {
+                staff = 0;
+                session = 0;
+            };
+
+        }
     }
 
     
-    
+
 }
+
+
 

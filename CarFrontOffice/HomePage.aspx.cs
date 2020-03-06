@@ -67,7 +67,6 @@ public partial class HomePage : System.Web.UI.Page
 
     protected void LOGOUT_Click(object sender, EventArgs e)
     {
-        CarClasses.clsLoggedin.session = 0;
-      
+        CarClasses.clsLoggedin.clsLogout();
     }
 }
