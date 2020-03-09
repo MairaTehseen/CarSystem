@@ -56,7 +56,7 @@
                         </div>
 
                         <div style="text-align:center;float:none;height:25px;padding-top:10px;">
-                        <asp:LinkButton style="text-decoration: none;font-family: 'Britannic Bold'; color:firebrick" ID="LOGOUT" runat="server">Logout</asp:LinkButton>
+                        <asp:LinkButton style="text-decoration: none;font-family: 'Britannic Bold'; color:firebrick" ID="LOGOUT" runat="server" OnClick="LOGOUT_Click1">Logout</asp:LinkButton>
                         </div>
                     </div>
                 </div>

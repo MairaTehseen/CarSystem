@@ -58,8 +58,15 @@ public partial class About : System.Web.UI.Page
         Response.Redirect("Login.aspx");
     }
 
-    protected void LOGOUT_Click(object sender, EventArgs e)
+    
+
+    protected void LOGOUT_Click1(object sender, EventArgs e)
     {
         CarClasses.clsLoggedin.clsLogout();
+        Label1.Visible = false;
+        LOGOUT.Visible = false;
+        Settings.Visible = false;
+        PaymentDetails.Visible = false;
+        Basket.Visible = false;
     }
 }

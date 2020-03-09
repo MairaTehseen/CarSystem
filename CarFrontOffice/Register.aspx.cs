@@ -65,6 +65,11 @@ public partial class Register : System.Web.UI.Page
     protected void LOGOUT_Click(object sender, EventArgs e)
     {
         CarClasses.clsLoggedin.clsLogout();
+        Label1.Visible = false;
+        LOGOUT.Visible = false;
+        Settings.Visible = false;
+        PaymentDetails.Visible = false;
+        Basket.Visible = false;
 
 
     }
