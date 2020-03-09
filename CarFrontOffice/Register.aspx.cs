@@ -107,4 +107,9 @@ public partial class Register : System.Web.UI.Page
 
         CarClasses.clsUsersAndStaffCollection.AddStaff(fn, ln, cr, ct, st, hn, pc, un, p1, ea);
     }
+
+    protected void PaymentDetails_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Payment_Details.aspx");
+    }
 }

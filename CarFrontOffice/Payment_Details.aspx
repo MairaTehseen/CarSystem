@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PayMenu.aspx.cs" Inherits="PayMenu" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Payment_Details.aspx.cs" Inherits="PayMenu" %>
 
 <!DOCTYPE html>
 
@@ -27,7 +27,7 @@
         <div style="width:50%;float:left">
         <div style="width:50%;float:left"><asp:ListBox ID="lstAddresses" runat="server" Width="100%"></asp:ListBox></div>
 
-           <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button1" runat="server" Text="Add new"  /></div>
+           <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button1" runat="server" Text="Add new" OnClick="Button1_Click"  /></div>
              <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button2" runat="server" Text="Edit"  /></div>
              <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button3" runat="server" Text="Delete"  /></div>
             </div>

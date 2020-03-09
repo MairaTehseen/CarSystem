@@ -67,4 +67,9 @@ public partial class Contact : System.Web.UI.Page
         PaymentDetails.Visible = false;
         Basket.Visible = false;
     }
+
+    protected void PaymentDetails_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Payment_Details.aspx");
+    }
 }

@@ -26,6 +26,11 @@ public partial class PayMenu : System.Web.UI.Page
 
     protected void Button4_Click(object sender, EventArgs e)
     {
+        
+    }
 
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Payment_Card.aspx");
     }
 }

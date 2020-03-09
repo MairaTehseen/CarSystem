@@ -46,7 +46,7 @@
 
                         <div style="float:none;height:25px;text-align:center;display: flex;justify-content:space-around;padding-top:10px;">
                             <div style="float:left">
-                        <asp:LinkButton style="text-decoration: none;font-family: 'Britannic Bold'; color:aliceblue" ID="PaymentDetails" runat="server">  Payment  </asp:LinkButton>
+                        <asp:LinkButton style="text-decoration: none;font-family: 'Britannic Bold'; color:aliceblue" ID="PaymentDetails" runat="server" OnClick="PaymentDetails_Click">  Payment  </asp:LinkButton>
                         </div>
                             <div style="float:left">
                             <asp:LinkButton style="text-decoration: none; font-family: 'Britannic Bold'; color: aliceblue" ID="Basket" runat="server">  Basket </asp:LinkButton>

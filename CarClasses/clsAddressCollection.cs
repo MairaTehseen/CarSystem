@@ -19,7 +19,18 @@ namespace CarClasses
             //object for data connection
             clsDataConnection DB = new clsDataConnection();
             //execute the stored procedure
-            DB.Execute("sproc_tblPaymentCardsCollection");
+            if (clsLoggedin.staff==0)
+            {
+                DB.AddParameter("@userstaff", clsLoggedin.session);
+                DB.AddParameter("@staff", clsLoggedin.staff);
+                DB.Execute("sproc_tblPaymentCardsCollection");
+            }else if (clsLoggedin.staff == 1)
+            {
+                DB.AddParameter("@userstaff", clsLoggedin.session);
+                DB.AddParameter("@staff", clsLoggedin.staff);
+                DB.Execute("sproc_tblPaymentCardsCollection");
+            }
+            
             //populate the array list with the data table
             PopulateArray(DB);
         }
