@@ -61,5 +61,36 @@ public partial class Login : System.Web.UI.Page
     protected void LOGOUT_Click(object sender, EventArgs e)
     {
         CarClasses.clsLoggedin.clsLogout();
+        Label1.Visible = false;
+        LOGOUT.Visible = false;
+        Settings.Visible = false;
+        PaymentDetails.Visible = false;
+        Basket.Visible = false;
+    }
+
+    
+
+    protected void LoginBTN_Click(object sender, EventArgs e)
+    {
+        string login = TextBoxLogin.Text;
+        string password = TextBoxPassword.Text;
+        CarClasses.clsLoggedin.login(login, password);
+        Label2.Text =  (CarClasses.clsLoggedin.login(login, password)).ToString();
+        if (CarClasses.clsLoggedin.session == 0)
+        {
+            Label1.Visible = false;
+            LOGOUT.Visible = false;
+            Settings.Visible = false;
+            PaymentDetails.Visible = false;
+            Basket.Visible = false;
+        }
+        else
+        {
+            Label1.Visible = true;
+            LOGOUT.Visible = true;
+            Settings.Visible = true;
+            PaymentDetails.Visible = true;
+            Basket.Visible = true;
+        }
     }
 }

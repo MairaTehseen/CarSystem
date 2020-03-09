@@ -6,6 +6,9 @@
 <head runat="server">
     <title>Car Company - Login</title>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <style type="text/css">
+        
+    </style>
 </head>
 <body style="margin:0px;background-color:white; padding:0px;height: 100%;">
     
@@ -62,6 +65,30 @@
                 </div>
                 </div>
             </div>
+
+
+          
+        <table class="auto-style1">
+            <tr>
+                <td align="right">Login :&nbsp; </td>
+                <td>
+                    <asp:TextBox ID="TextBoxLogin" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Password :</td>
+                <td>
+                    <asp:TextBox ID="TextBoxPassword" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">&nbsp;</td>
+                <td>
+                    <asp:Button ID="LoginBTN" runat="server" Text="Login" OnClick="LoginBTN_Click"  />
+                    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                </td>
+            </tr>
+        </table>
 
 
           
