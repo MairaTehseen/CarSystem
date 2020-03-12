@@ -8,7 +8,7 @@ namespace Car_Testing
     [TestClass]
     public class tstCardsCollection
     {
-        public object TestCard { get; private set; }
+        public object TestCard { get; set; }
 
         [TestMethod]
         public void InstanceOK()
@@ -37,7 +37,7 @@ namespace Car_Testing
         public void CountCardsOK()
         {
             clsCardsCollection AllCards = new clsCardsCollection();
-            Int32 SomeCount = 0;
+            Int32 SomeCount = 2;
             AllCards.Count = SomeCount;
             Assert.AreEqual(AllCards.Count, SomeCount);
         }
@@ -55,7 +55,8 @@ namespace Car_Testing
             TestItem.ExpireDateMonth = DateTime.Now.Month;
 
             AllCards.ThisCard = TestCard;
-            Assert.AreEqual(AllCards.CardsList, TestCard);
+
+            Assert.AreEqual(AllCards.ThisCard, TestCard);
         }
         [TestMethod]
         public void ListAndCountOK()
@@ -76,6 +77,14 @@ namespace Car_Testing
             AllCards.CardsList = TestList;
 
             Assert.AreEqual(AllCards.Count, TestList.Count);
+        }
+        [TestMethod]
+        public void TwoRecordsPresent()
+        {
+            clsCardsCollection AllCards = new clsCardsCollection();
+            
+            
+            Assert.AreEqual(AllCards.Count, 2);
         }
     }
 }

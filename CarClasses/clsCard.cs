@@ -1,4 +1,6 @@
-﻿namespace CarClasses
+﻿using System;
+
+namespace CarClasses
 {
     public class clsCard
     {
