@@ -1,87 +1,81 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CarClasses;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
 namespace Car_Testing
 {
     [TestClass]
-    public class tstCountyCollection
+    public class tstCardsCollection
     {
+        public object TestCard { get; private set; }
+
         [TestMethod]
         public void InstanceOK()
         {
-            //create an instance of the class we want to create
-            clsPaymentCardsCollection AllCounties = new clsPaymentCardsCollection();
-            //test to see that it exists
-            Assert.IsNotNull(AllCounties);
-        }
+            clsCardsCollection acard = new clsCardsCollection();
 
-        [TestMethod]
-        public void CountPropertyOK()
-        {
-            //create an instance of the class we want to create
-            clsPaymentCardsCollection AllCounties = new clsPaymentCardsCollection();
-            //create some test data to assign to the property
-            Int32 SomeCount = 72;
-            //assign the data to the property
-            AllCounties.Count = SomeCount;
-            //test to see that the two values are the same
-            Assert.AreEqual(AllCounties.Count, SomeCount);
+            Assert.IsNotNull(acard);
         }
-
         [TestMethod]
-        public void AllCountiesOK()
+        public void CardsListOK()
         {
-            //create an instance of the class we want to create
-            clsPaymentCardsCollection Counties = new clsPaymentCardsCollection();
-            //create some test data to assign to the property
-            //in this case the data needs to be a list of objects
-            List<clsCounty> TestList = new List<clsCounty>();
-            //add an item to the list
-            //create the item of test data
-            clsCounty TestItem = new clsCounty();
-            //set its properties
-            TestItem.CountyNo = 1;
-            TestItem.County = "Leicestershire";
-            //add the item to the test list
+            clsCardsCollection AllCards = new clsCardsCollection();
+            List<clsCard> TestList = new List<clsCard>();
+            clsCard TestItem = new clsCard();
+            TestItem.Active = true;
+            TestItem.CardNo = 9456345634563456;
+            TestItem.CardHolder = "Cezary Szwalbe";
+            TestItem.CardSecurityNumber = 123;
+            TestItem.ExpireDateYear = DateTime.Now.Year;
+            TestItem.ExpireDateMonth = DateTime.Now.Month;
             TestList.Add(TestItem);
-            //assign the data to the property
-            Counties.AllCounties = TestList;
-            //test to see that the two values are the same
-            Assert.AreEqual(Counties.AllCounties, TestList);
+            AllCards.CardsList = TestList;
+            Assert.AreEqual(AllCards.CardsList, TestList);
         }
-
         [TestMethod]
-        public void CountMatchesList()
+        public void CountCardsOK()
         {
-            //create an instance of the class we want to create
-            clsPaymentCardsCollection Counties = new clsPaymentCardsCollection();
-            //create some test data to assign to the property
-            //in this case the data needs to be a list of objects
-            List<clsCounty> TestList = new List<clsCounty>();
-            //add an item to the list
-            //create the item of test data
-            clsCounty TestItem = new clsCounty();
-            //set its properties
-            TestItem.CountyNo = 1;
-            TestItem.County = "Leicestershire";
-            //add the item to the test list
-            TestList.Add(TestItem);
-            //assign the data to the property
-            Counties.AllCounties = TestList;
-            //test to see that the two values are the same
-            Assert.AreEqual(Counties.Count, TestList.Count);
+            clsCardsCollection AllCards = new clsCardsCollection();
+            Int32 SomeCount = 0;
+            AllCards.Count = SomeCount;
+            Assert.AreEqual(AllCards.Count, SomeCount);
         }
+        [TestMethod]
+        public void ThisCardPropertyOK()
+        {
+            clsCardsCollection AllCards = new clsCardsCollection();
+           
+            clsCard TestItem = new clsCard();
+            TestItem.Active = true;
+            TestItem.CardNo = 9456345634563456;
+            TestItem.CardHolder = "Cezary Szwalbe";
+            TestItem.CardSecurityNumber = 123;
+            TestItem.ExpireDateYear = DateTime.Now.Year;
+            TestItem.ExpireDateMonth = DateTime.Now.Month;
 
-        //[TestMethod]
-        //public void TwoCountiesPresent()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsPaymentCardsCollection Counties = new clsPaymentCardsCollection();
-        //    //test to see that the two values are the same
-        //    Assert.AreEqual(Counties.Count, 2);
-        //}
+            AllCards.ThisCard = TestCard;
+            Assert.AreEqual(AllCards.CardsList, TestCard);
+        }
+        [TestMethod]
+        public void ListAndCountOK()
+        {
+            clsCardsCollection AllCards = new clsCardsCollection();
+            List<clsCard> TestList = new List<clsCard>();
+            clsCard TestItem = new clsCard();
 
+            TestItem.Active = true;
+            TestItem.CardNo = 9456345634563456;
+            TestItem.CardHolder = "Cezary Szwalbe";
+            TestItem.CardSecurityNumber = 123;
+            TestItem.ExpireDateYear = DateTime.Now.Year;
+            TestItem.ExpireDateMonth = DateTime.Now.Month;
+
+            TestList.Add(TestItem);
+
+            AllCards.CardsList = TestList;
+
+            Assert.AreEqual(AllCards.Count, TestList.Count);
+        }
     }
 }
