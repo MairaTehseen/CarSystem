@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Car_Testing
 {
     [TestClass]
-    public class tstcards
+    public class tstCards
     {
         [TestMethod]
         public void InstanceOK()

@@ -22,12 +22,12 @@ namespace CarClasses
             if (clsLoggedin.staff==0)
             {
                 DB.AddParameter("@userstaff", clsLoggedin.session);
-                DB.AddParameter("@staff", clsLoggedin.staff);
+               
                 DB.Execute("sproc_tblPaymentCardsCollection");
             }else if (clsLoggedin.staff == 1)
             {
                 DB.AddParameter("@userstaff", clsLoggedin.session);
-                DB.AddParameter("@staff", clsLoggedin.staff);
+                
                 DB.Execute("sproc_tblPaymentCardsCollection");
             }
             
