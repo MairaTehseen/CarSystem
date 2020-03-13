@@ -24,7 +24,7 @@ namespace Car_Testing
             List<clsCard> TestList = new List<clsCard>();
             clsCard TestItem = new clsCard();
             TestItem.Active = true;
-            TestItem.CardNo = 9456345634563456;
+            TestItem.CardNr = 9456345634563456;
             TestItem.CardHolder = "Cezary Szwalbe";
             TestItem.CardSecurityNumber = 123;
             TestItem.ExpireDateYear = DateTime.Now.Year;
@@ -48,7 +48,7 @@ namespace Car_Testing
            
             clsCard TestItem = new clsCard();
             TestItem.Active = true;
-            TestItem.CardNo = 9456345634563456;
+            TestItem.CardNr = 9456345634563456;
             TestItem.CardHolder = "Cezary Szwalbe";
             TestItem.CardSecurityNumber = 123;
             TestItem.ExpireDateYear = DateTime.Now.Year;
@@ -66,7 +66,7 @@ namespace Car_Testing
             clsCard TestItem = new clsCard();
 
             TestItem.Active = true;
-            TestItem.CardNo = 9456345634563456;
+            TestItem.CardNr = 9456345634563456;
             TestItem.CardHolder = "Cezary Szwalbe";
             TestItem.CardSecurityNumber = 123;
             TestItem.ExpireDateYear = DateTime.Now.Year;

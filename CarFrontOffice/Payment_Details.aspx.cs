@@ -9,19 +9,30 @@ public partial class PayMenu : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (IsPostBack == false)
+        { 
+            
+            DisplayCards(); 
+
+        }
         
-            //create an instance of the County Collection
-            CarClasses.clsAddressCollection Addresses = new CarClasses.clsAddressCollection();
-            //set the data source to the list of counties in the collection
-            lstAddresses.DataSource = Addresses.AddressList;
+
+
+    }
+
+    void DisplayCards()
+    {
+
+    //create an instance of the County Collection
+            CarClasses.clsCardsCollection Card = new CarClasses.clsCardsCollection();
+    //set the data source to the list of counties in the collection
+    lstCards.DataSource = Card.CardsList;
             //set the name of the primary key
-            lstAddresses.DataValueField = "AddressNo";
+            lstCards.DataValueField = "CardNr";
             //set the data field to display
-            lstAddresses.DataTextField = "Street";
+            lstCards.DataTextField = "CardNr";
             //bind the data to the list
-            lstAddresses.DataBind();
-        
-        
+            lstCards.DataBind();
     }
 
     protected void Button4_Click(object sender, EventArgs e)

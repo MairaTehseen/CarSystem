@@ -28,7 +28,8 @@ public class clsDataConnection
 
     public clsDataConnection()
     {
-        connectionString = "Server=tcp:cezaryserver.database.windows.net,1433;Initial Catalog=CarSystem;Persist Security Info=False;User ID=goldenfive;Password=GoldGold5;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        connectionString = "Server=tcp:pmanddev.database.windows.net,1433;Initial Catalog=CarBook;Persist Security Info=False;User ID=pmanddevGroupB2;Password=Demontfort123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+       // connectionString = "Server=tcp:cezaryserver.database.windows.net,1433;Initial Catalog=CarSystem;Persist Security Info=False;User ID=goldenfive;Password=GoldGold5;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
     }
 
     private string GetConnectionString()
