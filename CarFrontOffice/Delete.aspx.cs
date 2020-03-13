@@ -21,7 +21,7 @@ public partial class Delete : System.Web.UI.Page
 
     protected void ButtonYes_Click(object sender, EventArgs e)
     {
-
+        DeleteCard();
         Response.Redirect("Payment_Details.aspx");
     }
 

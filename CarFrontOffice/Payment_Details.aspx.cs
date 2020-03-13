@@ -55,7 +55,9 @@ public partial class PayMenu : System.Web.UI.Page
             CardNr = Convert.ToDouble(lstCards.SelectedValue);
             Session["CardNo"] = CardNr;
             Response.Redirect("Delete.aspx");
-        }else
+            //lbl2Error.Text = CardNr.ToString();
+        }
+        else
         {
 
             lbl2Error.Text = "Please select a record to delete from the list";
