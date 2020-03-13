@@ -26,7 +26,7 @@ namespace Car_Testing
             List<clsCard> TestList = new List<clsCard>();
             clsCard TestItem = new clsCard();
             TestItem.Active = true;
-            TestItem.CardNr = 9456345634563456;
+            TestItem.CardNr = 945634563456345;
             TestItem.CardHolder = "Cezary Szwalbe";
             TestItem.CardSecurityNumber = 123;
             TestItem.ExpireDateYear = DateTime.Now.Year;
@@ -68,7 +68,7 @@ namespace Car_Testing
             clsCard TestItem = new clsCard();
 
             TestItem.Active = true;
-            TestItem.CardNr = 9456345634563456;
+            TestItem.CardNr = 945634563456456;
             TestItem.CardHolder = "Cezary Szwalbe";
             TestItem.CardSecurityNumber = 123;
             TestItem.ExpireDateYear = DateTime.Now.Year;
@@ -98,7 +98,7 @@ namespace Car_Testing
 
             double PrimaryKey = 0;
             TestItem.Active = true;
-            TestItem.CardNr = 9456345634563456;
+            TestItem.CardNr = 945634534563456;
             TestItem.CardHolder = "Cezary Szwalbe";
             TestItem.CardSecurityNumber = 123;
             TestItem.ExpireDateYear = DateTime.Now.Year;
@@ -121,7 +121,7 @@ namespace Car_Testing
 
             double PrimaryKey = 0;
             TestItem.Active = true;
-            TestItem.CardNr = 9456345634563456;
+            TestItem.CardNr = 945345634563456;
             TestItem.CardHolder = "Cezary Szwalbe";
             TestItem.CardSecurityNumber = 123;
             TestItem.ExpireDateYear = DateTime.Now.Year;
@@ -137,5 +137,20 @@ namespace Car_Testing
 
             Assert.IsFalse(Found);
         }
+        [TestMethod]
+        public void FindMethodOK()
+        {
+
+            clsCardsCollection AllCards = new clsCardsCollection();
+
+            Boolean Found = false;
+            Int32 CardNr = 1;
+            Found = AllCards.Find(CardNr);
+
+            Assert.IsTrue(Found);
+        }
+        
+
+
     }
 }

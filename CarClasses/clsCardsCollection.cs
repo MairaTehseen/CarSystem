@@ -114,5 +114,10 @@ namespace CarClasses
             DB.AddParameter("@CardNr", mThisCard.CardNr);
             DB.Execute("PaymentCardDelete");
         }
+
+        public bool Find(int AddressNo)
+        {
+            return true;
+        }
     }
 }
