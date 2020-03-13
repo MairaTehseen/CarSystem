@@ -8,7 +8,9 @@ namespace Car_Testing
     [TestClass]
     public class tstCardsCollection
     {
-        public object TestCard { get; set; }
+        public clsCard TestCard { get; set; }
+
+       
 
         [TestMethod]
         public void InstanceOK()
@@ -53,7 +55,7 @@ namespace Car_Testing
             TestItem.CardSecurityNumber = 123;
             TestItem.ExpireDateYear = DateTime.Now.Year;
             TestItem.ExpireDateMonth = DateTime.Now.Month;
-
+            
             AllCards.ThisCard = TestCard;
 
             Assert.AreEqual(AllCards.ThisCard, TestCard);
@@ -85,6 +87,29 @@ namespace Car_Testing
             
             
             Assert.AreEqual(AllCards.Count, 2);
+        }
+        [TestMethod]
+        public void AddMethodOK()
+        {
+
+            clsCardsCollection AllCards = new clsCardsCollection();
+
+            clsCard TestItem = new clsCard();
+
+            double PrimaryKey = 0;
+            TestItem.Active = true;
+            TestItem.CardNr = 9456345634563456;
+            TestItem.CardHolder = "Cezary Szwalbe";
+            TestItem.CardSecurityNumber = 123;
+            TestItem.ExpireDateYear = DateTime.Now.Year;
+            TestItem.ExpireDateMonth = DateTime.Now.Month;
+
+            AllCards.ThisCard = TestItem;
+            PrimaryKey = AllCards.Add();
+            TestItem.CardNr = PrimaryKey;
+            AllCards.ThisCard.Find(PrimaryKey);
+
+            Assert.AreEqual(AllCards.ThisCard, TestItem);
         }
     }
 }

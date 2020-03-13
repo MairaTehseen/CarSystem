@@ -42,6 +42,7 @@ public partial class PayMenu : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
+        Session["CardNo"] = -1;
         Response.Redirect("Payment_Card.aspx");
     }
 }

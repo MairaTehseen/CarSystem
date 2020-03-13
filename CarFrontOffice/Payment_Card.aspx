@@ -29,18 +29,20 @@
          <div style="width:30%; float:left">
         <div>
             
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtCardHolder" runat="server" Width="156px"></asp:TextBox>
         </div>
         <div>
-             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+             <asp:TextBox ID="txtCardNumber" runat="server" Width="156px"></asp:TextBox>
             
         </div>
         <div>
-             <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+             <asp:TextBox ID="txtYear" runat="server" Width="78px">Year (0000)</asp:TextBox>
+            
+             <asp:TextBox ID="txtMonth" runat="server" Width="70px">Month (00)</asp:TextBox>
             
         </div>
         <div>
-             <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+             <asp:TextBox ID="txtsecuritycode" runat="server" Width="155px"></asp:TextBox>
             
         </div>
             </div>
@@ -48,6 +50,12 @@
         <asp:Button ID="Button1" runat="server" Text="Confirm" OnClick="Button1_Click" />
             </div>
         <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="Button2_Click" />
+        
+        <p>
+            &nbsp;</p>
+        <p>
+            <asp:Label ID="lblError" runat="server" Text="Label"></asp:Label>
+        </p>
         
     </form>
 </body>

@@ -6,7 +6,8 @@ namespace CarClasses
     
     public class clsCardsCollection
     {
-        
+        List<clsCard> mCardsList = new List<clsCard>();
+        clsCard mThisCard = new clsCard();
         public clsCardsCollection()
         {
             
@@ -46,7 +47,7 @@ namespace CarClasses
             //mCardsList.Add(TestItem);
 
         }
-        List<clsCard> mCardsList = new List<clsCard>();
+        
 
         public List<clsCard> CardsList
         {
@@ -77,6 +78,33 @@ namespace CarClasses
 
 
         }
-        public object ThisCard { get; set; }
+        
+
+        public clsCard ThisCard
+        {
+            get
+            {
+                //return the private data
+                return mThisCard;
+            }
+            set
+            {
+                //set the private data
+                mThisCard = value;
+            }
+        }
+
+        public double Add()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@Active", mThisCard.Active);
+            DB.AddParameter("@CardNr", mThisCard.Active);
+            DB.AddParameter("@CardHolder", mThisCard.Active);
+            DB.AddParameter("@CardSecurityNumber", mThisCard.Active);
+            DB.AddParameter("@ExpireDateYear", mThisCard.Active);
+            DB.AddParameter("@ExpireDateMonth", mThisCard.Active);
+            return DB.Execute("PaymentCardInsert");
+
+        }
     }
 }
