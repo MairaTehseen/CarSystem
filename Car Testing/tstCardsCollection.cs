@@ -111,5 +111,31 @@ namespace Car_Testing
 
             Assert.AreEqual(AllCards.ThisCard, TestItem);
         }
+        [TestMethod]
+        public void DeleteMethodOK()
+        {
+
+            clsCardsCollection AllCards = new clsCardsCollection();
+
+            clsCard TestItem = new clsCard();
+
+            double PrimaryKey = 0;
+            TestItem.Active = true;
+            TestItem.CardNr = 9456345634563456;
+            TestItem.CardHolder = "Cezary Szwalbe";
+            TestItem.CardSecurityNumber = 123;
+            TestItem.ExpireDateYear = DateTime.Now.Year;
+            TestItem.ExpireDateMonth = DateTime.Now.Month;
+
+            AllCards.ThisCard = TestItem;
+            PrimaryKey = AllCards.Add();
+            TestItem.CardNr = PrimaryKey;
+            AllCards.ThisCard.Find(PrimaryKey);
+            AllCards.Delete();
+
+            Boolean Found =  AllCards.ThisCard.Find(PrimaryKey);
+
+            Assert.IsFalse(Found);
+        }
     }
 }

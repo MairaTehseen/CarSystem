@@ -98,13 +98,21 @@ namespace CarClasses
         {
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@Active", mThisCard.Active);
-            DB.AddParameter("@CardNr", mThisCard.Active);
-            DB.AddParameter("@CardHolder", mThisCard.Active);
-            DB.AddParameter("@CardSecurityNumber", mThisCard.Active);
-            DB.AddParameter("@ExpireDateYear", mThisCard.Active);
-            DB.AddParameter("@ExpireDateMonth", mThisCard.Active);
+            DB.AddParameter("@CardNr", mThisCard.CardNr);
+            DB.AddParameter("@CardHolder", mThisCard.CardHolder);
+            DB.AddParameter("@CardSecurityNumber", mThisCard.CardSecurityNumber);
+            DB.AddParameter("@ExpireDateYear", mThisCard.ExpireDateYear);
+            DB.AddParameter("@ExpireDateMonth", mThisCard.ExpireDateMonth);
             return DB.Execute("PaymentCardInsert");
 
+        }
+
+        public void Delete()
+        {
+            clsDataConnection DB = new clsDataConnection();
+
+            DB.AddParameter("@CardNr", mThisCard.CardNr);
+            DB.Execute("PaymentCardDelete");
         }
     }
 }

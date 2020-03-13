@@ -29,7 +29,8 @@
 
            <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button1" runat="server" Text="Add new" OnClick="Button1_Click"  /></div>
              <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button2" runat="server" Text="Edit"  /></div>
-             <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button3" runat="server" Text="Delete"  /></div>
+             <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button3" runat="server" Text="Delete" OnClick="Button3_Click"  /></div>
+            <div style="width:80px;padding-left:5%;padding-top:10px;float:left"> <asp:Label ID="lbl2Error" runat="server" Text="Label"></asp:Label></div>
             </div>
     </form>
 </body>

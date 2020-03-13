@@ -45,4 +45,20 @@ public partial class PayMenu : System.Web.UI.Page
         Session["CardNo"] = -1;
         Response.Redirect("Payment_Card.aspx");
     }
+
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+        Double CardNr;
+
+        if (lstCards.SelectedIndex != -1)
+        {
+            CardNr = Convert.ToDouble(lstCards.SelectedValue);
+            Session["CardNo"] = CardNr;
+            Response.Redirect("Delete.aspx");
+        }else
+        {
+
+            lbl2Error.Text = "Please select a record to delete from the list";
+        }
+    }
 }
