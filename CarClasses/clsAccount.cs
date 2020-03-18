@@ -15,13 +15,9 @@ namespace CarClasses
             //create a string variable to store the error
             String Error = "";
             //create a temporary variable to store date values
-            DateTime DateTemp;
+            
             //if the HouseNo is blank
-            if (AccountNr.Length < 16)
-            {
-                //record the error
-                Error = Error + "Correct card number contain 16 digits, write full card number : ";
-            }
+            
             //if the house no is greater than 6 characters
             if (AccountNr.Length > 16)
             {
@@ -53,10 +49,10 @@ namespace CarClasses
                 Error = Error + "The Card security number may not be blank : ";
             }
             //if the street is too long
-            if (Bank.Length > 3)
+            if (Bank.Length > 20)
             {
                 //record the error
-                Error = Error + "The Card Security Number must be less than 4 characters : ";
+                Error = Error + "Card Number must not be longer than 20 chars : ";
             }
             //is the town blank
             
@@ -69,7 +65,7 @@ namespace CarClasses
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
             //add the parameter for the address no to search for
-            DB.AddParameter("@AccontNr", primaryKey);
+            DB.AddParameter("@AccountNr", primaryKey);
             //execute the stored procedure
             DB.Execute("PaymentFindAccount");
             //if one record is found (there should be either one or zero!)
@@ -77,8 +73,8 @@ namespace CarClasses
             {
                 //copy the data from the database to the private data members
                 AccountNr = Convert.ToInt32(DB.DataTable.Rows[0]["AccountNr"]);
-                AccountBank = Convert.ToString(DB.DataTable.Rows[0]["Bank"]);
-                AccountHolder = Convert.ToString(DB.DataTable.Rows[0]["AccontHolder"]);
+                AccountBank = Convert.ToString(DB.DataTable.Rows[0]["AccountBank"]);
+                AccountHolder = Convert.ToString(DB.DataTable.Rows[0]["AccountHolder"]);
                 
                
                 //return that everything worked OK

@@ -95,8 +95,8 @@ namespace CarClasses
         public double Add()
         {
             clsDataConnection DB = new clsDataConnection();
-            DB.AddParameter("@AccontNr", mThisAccount.AccountNr);
-            DB.AddParameter("@AccontHolder", mThisAccount.AccountHolder);
+            DB.AddParameter("@AccountNr", mThisAccount.AccountNr);
+            DB.AddParameter("@AccountHolder", mThisAccount.AccountHolder);
             DB.AddParameter("@Bank", mThisAccount.AccountBank);
             
 
@@ -108,7 +108,7 @@ namespace CarClasses
         {
             clsDataConnection DB = new clsDataConnection();
 
-            DB.AddParameter("@CardNr", mThisAccount.AccountNr);
+            DB.AddParameter("@AccountNr", mThisAccount.AccountNr);
             DB.Execute("PaymentAccountDelete");
         }
 

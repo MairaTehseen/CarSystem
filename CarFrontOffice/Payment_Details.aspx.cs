@@ -80,11 +80,25 @@ public partial class PayMenu : System.Web.UI.Page
 
     protected void Button4_Click1(object sender, EventArgs e)
     {
-
+        Session["AccountNo"] = -1;
+        Response.Redirect("Payment_Account.aspx");
     }
 
     protected void Button6_Click(object sender, EventArgs e)
     {
+        int AccountNr;
 
+        if (ListAccounts.SelectedIndex != -1)
+        {
+            AccountNr = Convert.ToInt32(ListAccounts.SelectedValue);
+            Session["AccountNo"] = AccountNr;
+            Response.Redirect("DeleteAccount.aspx");
+            //lbl2Error.Text = CardNr.ToString();
+        }
+        else
+        {
+
+            lbl2Error.Text = "Please select a record to delete from the list";
+        }
     }
 }
