@@ -12,8 +12,8 @@ public partial class PayMenu : System.Web.UI.Page
         if (IsPostBack == false)
         { 
             
-            DisplayCards(); 
-
+            DisplayCards();
+            DisplayAccounts();
         }
         
 
@@ -33,6 +33,20 @@ public partial class PayMenu : System.Web.UI.Page
             lstCards.DataTextField = "CardNr";
             //bind the data to the list
             lstCards.DataBind();
+    }
+    void DisplayAccounts()
+    {
+
+        //create an instance of the County Collection
+        CarClasses.clsAccountsCollection Account = new CarClasses.clsAccountsCollection();
+        //set the data source to the list of counties in the collection
+        ListAccounts.DataSource = Account.AccountsList;
+        //set the name of the primary key
+        ListAccounts.DataValueField = "AccountNr";
+        //set the data field to display
+        ListAccounts.DataTextField = "AccountNr";
+        //bind the data to the list
+        ListAccounts.DataBind();
     }
 
     protected void Button4_Click(object sender, EventArgs e)

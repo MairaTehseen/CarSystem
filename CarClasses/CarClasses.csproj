@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="clsAccount.cs" />
     <Compile Include="clsCard.cs" />
-    <Compile Include="clsAccontsCollection.cs" />
+    <Compile Include="clsAccountsCollection.cs" />
     <Compile Include="clsCardsCollection.cs" />
     <Compile Include="clsDataConnection.cs" />
     <Compile Include="clsLoggedin.cs" />

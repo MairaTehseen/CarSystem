@@ -4,24 +4,24 @@ using System;
 namespace CarClasses
 {
     
-    public class clsAccontsCollection
+    public class clsAccountsCollection
     {
         List<clsAccount> mAccountsList = new List<clsAccount>();
         clsAccount mThisAccount = new clsAccount();
-        public clsAccontsCollection()
+        public clsAccountsCollection()
         {
             
             Int32 Index = 0;
             Int32 RecordCount = 0;
             clsDataConnection DB = new clsDataConnection();
-            DB.Execute("PaymentAccontsSellect");
+            DB.Execute("PaymentAccountSellect");
             RecordCount = DB.Count;
             while (Index<RecordCount)
             {
                 clsAccount anacconut = new clsAccount();
 
-                anacconut.AccountNr = Convert.ToInt32(DB.DataTable.Rows[Index]["AccontNr"]);
-                anacconut.AccountHolder = Convert.ToString(DB.DataTable.Rows[Index]["AccontHolder"]);
+                anacconut.AccountNr = Convert.ToInt32(DB.DataTable.Rows[Index]["AccountNr"]);
+                anacconut.AccountHolder = Convert.ToString(DB.DataTable.Rows[Index]["AccountHolder"]);
                 anacconut.AccountBank = Convert.ToString(DB.DataTable.Rows[Index]["AccountBank"]);
                 mAccountsList.Add(anacconut);
                 Index++;
@@ -47,7 +47,7 @@ namespace CarClasses
         }
         
 
-        public List<clsAccount> AccontsList
+        public List<clsAccount> AccountsList
         {
 
             get
@@ -97,10 +97,10 @@ namespace CarClasses
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@AccontNr", mThisAccount.AccountNr);
             DB.AddParameter("@AccontHolder", mThisAccount.AccountHolder);
-            DB.AddParameter("@AccountBank", mThisAccount.AccountBank);
+            DB.AddParameter("@Bank", mThisAccount.AccountBank);
             
 
-            return DB.Execute("PaymentAccontInsert");
+            return DB.Execute("PaymentAccountInsert");
 
         }
 
@@ -109,7 +109,7 @@ namespace CarClasses
             clsDataConnection DB = new clsDataConnection();
 
             DB.AddParameter("@CardNr", mThisAccount.AccountNr);
-            DB.Execute("PaymentAcconutDelete");
+            DB.Execute("PaymentAccountDelete");
         }
 
         public bool Find(int AccountNr)

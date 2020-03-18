@@ -77,8 +77,8 @@ namespace CarClasses
             {
                 //copy the data from the database to the private data members
                 AccountNr = Convert.ToInt32(DB.DataTable.Rows[0]["AccountNr"]);
-                Bank = Convert.ToString(DB.DataTable.Rows[0]["Bank"]);
-                AccontHolder = Convert.ToString(DB.DataTable.Rows[0]["AccontHolder"]);
+                AccountBank = Convert.ToString(DB.DataTable.Rows[0]["Bank"]);
+                AccountHolder = Convert.ToString(DB.DataTable.Rows[0]["AccontHolder"]);
                 
                
                 //return that everything worked OK
