@@ -29,8 +29,8 @@
   
         
             <asp:ListBox ID="lstbxCars" runat="server" style="z-index: 1; left: 452px; top: 273px; position: absolute; width: 380px"></asp:ListBox>
-            <asp:Button ID="btnBlank" runat="server" BackColor="Black" BorderColor="Black" BorderStyle="None" Height="36px" style="z-index: 1; left: 721px; top: 75px; position: absolute; width: 250px" Text="Butto" Width="129px" />
-            <asp:Button ID="btnStaffLogin" runat="server" BackColor="Black" BorderColor="Black" BorderStyle="None" Font-Bold="True" ForeColor="White" Height="36px" style="z-index: 1; left: 971px; top: 75px; position: absolute" Text="Admin Login" Width="129px" />
+            <asp:Button ID="btnBlank" runat="server" BackColor="Black" BorderColor="Black" BorderStyle="None" Height="36px" style="z-index: 1; left: 721px; top: 75px; position: absolute; width: 250px" Text="Butto" Width="129px" OnClick="btnBlank_Click" />
+            <asp:Button ID="btnStaffLogin" runat="server" BackColor="Black" BorderColor="Black" BorderStyle="None" Font-Bold="True" ForeColor="White" Height="36px" style="z-index: 1; left: 971px; top: 75px; position: absolute" Text="Admin Login" Width="129px" OnClick="btnStaffLogin_Click" />
             <asp:Button ID="btnRegister" runat="server" BackColor="Black" BorderColor="Black" BorderStyle="None" Font-Bold="True" ForeColor="White" Height="36px" style="z-index: 1; left: 1098px; top: 75px; position: absolute" Text="Register" Width="129px" OnClick="btnRegister_Click" />
             <asp:Button ID="btnCustomerLogin" runat="server" BackColor="Black" BorderColor="Black" BorderStyle="None" Font-Bold="True" ForeColor="White" Height="36px" OnClick="btnCustomerLogin_Click" style="z-index: 1; left: 1226px; top: 75px; position: absolute" Text="Login" Width="129px" />
             <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 46px; top: 622px; position: absolute"></asp:Label>
