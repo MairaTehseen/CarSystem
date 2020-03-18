@@ -870,7 +870,128 @@ namespace Car_Testing
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
+        /////////////////////////////////////////////////////////////////////
 
+
+        [TestMethod]
+        public void CustomerPasswordMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string CustomerPassword = "ab"; //this should trigger an error
+            //invoke the method
+            Error = ACustomer.Valid(CustomerFirstName, CustomerLastName, Email, TelephoneNo, Address1, Address2, PostCode, CustomerPassword);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CustomerPasswordNameMin()
+        {
+            //create an instanc eof the class we want to create
+            clsCustomer Acustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string CustomerPassword = "abc"; //this should pass
+            //invoke the method
+            Error = Acustomer.Valid(CustomerFirstName, CustomerLastName, Email, TelephoneNo, Address1, Address2, PostCode, CustomerPassword);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CustomerPasswordMinPlusOne()
+        {
+            //create an instanc eof the class we want to create
+            clsCustomer Acustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string CustomerPassword = "abcd"; //this should pass
+            //invoke the method
+            Error = Acustomer.Valid(CustomerFirstName, CustomerLastName, Email, TelephoneNo, Address1, Address2, PostCode, CustomerPassword);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CustomerPasswordMid()
+        {
+            //create an instanc eof the class we want to create
+            clsCustomer Acustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string CustomerPassword = "abcdefghij"; //this should pass
+            //invoke the method
+            Error = Acustomer.Valid(CustomerFirstName, CustomerLastName, Email, TelephoneNo, Address1, Address2, PostCode, CustomerPassword);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CustomerPasswordMaxLessOne()
+        {
+            //create an instanc eof the class we want to create
+            clsCustomer Acustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string CustomerPassword = "abcdefghijklmnopqrs"; //this should pass
+            //invoke the method
+            Error = Acustomer.Valid(CustomerFirstName, CustomerLastName, Email, TelephoneNo, Address1, Address2, PostCode, CustomerPassword);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CustomerPasswordMax()
+        {
+            //create an instanc eof the class we want to create
+            clsCustomer Acustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string CustomerPassword = "abcdefghijklmnopqrst"; //this should pass
+            //invoke the method
+            Error = Acustomer.Valid(CustomerFirstName, CustomerLastName, Email, TelephoneNo, Address1, Address2, PostCode, CustomerPassword);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CustomerPasswordMaxPlusOne()
+        {
+            //create an instanc eof the class we want to create
+            clsCustomer Acustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string CustomerPassword = "abcdefghijklmnopqrstu"; //this should pass
+            //invoke the method
+            Error = Acustomer.Valid(CustomerFirstName, CustomerLastName, Email, TelephoneNo, Address1, Address2, PostCode, CustomerPassword);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CustomerPasswordExtremeMax()
+        {
+            //create an instanc eof the class we want to create
+            clsCustomer Acustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            CustomerFirstName = CustomerFirstName.PadRight(500, 'a'); //this should pass
+            //invoke the method
+            Error = Acustomer.Valid(CustomerFirstName, CustomerLastName, Email, TelephoneNo, Address1, Address2, PostCode, CustomerPassword);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
 
 
