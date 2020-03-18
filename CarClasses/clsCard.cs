@@ -11,10 +11,70 @@ namespace CarClasses
         public int ExpireDateYear { get; set; }
         public int ExpireDateMonth { get; set; }
 
-        public string Valid(string text1, string text2, string text3, string text4, string text5)
+        public string Valid(string CardNr, string CardHolder, string CardSecurityNumber, string ExpireDateYear, string ExpireDateMonth)
         {
-
-            return "";
+            
+            //create a string variable to store the error
+            String Error = "";
+            //create a temporary variable to store date values
+            DateTime DateTemp;
+            //if the HouseNo is blank
+            if (CardNr.Length < 16)
+            {
+                //record the error
+                Error = Error + "Correct card number contain 16 digits, write full card number : ";
+            }
+            //if the house no is greater than 6 characters
+            if (CardNr.Length > 16)
+            {
+                //record the error
+                Error = Error + "Correct card number contain 16 digits, delete an excess : ";
+            }
+            try
+            {
+                //copy the dateAdded value to the DateTemp variable
+                DateTemp = Convert.ToDateTime(ExpireDateYear + ExpireDateMonth);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the past : ";
+                }
+                //check to see if the date is greater than today's date
+                
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The date was not a valid date : ";
+            }
+            //is the post code blank
+            if (CardHolder.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Card Holder may not be blank : ";
+            }
+            //if the post code is too long
+            if (CardHolder.Length < 6)
+            {
+                //record the error
+                Error = Error + "The Card Holder must be longer than 6 characters : ";
+            }
+            //is the street blank
+            if (CardSecurityNumber.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Card security number may not be blank : ";
+            }
+            //if the street is too long
+            if (CardSecurityNumber.Length > 3)
+            {
+                //record the error
+                Error = Error + "The Card Security Number must be less than 4 characters : ";
+            }
+            //is the town blank
+            
+            //return any error messages
+            return Error;
         }
 
         public bool Find(double primaryKey)

@@ -51,8 +51,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tstCardsCollection.cs" />
-    <Compile Include="tstPayments.cs" />
-    <Compile Include="tstAddressCollection.cs" />
+    <Compile Include="tstCard.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
