@@ -113,6 +113,7 @@ namespace Car_Testing
             TestItem.Address1 = "11 Bishops Court";
             TestItem.Address2 = "Haverhill";
             TestItem.PostCode = "CB9 7BS";
+            TestItem.CustomerPassword = "xyxy";
             //set ThisCustomer to the test data
             AllCustomers.ThisCustomer = TestItem;
             //add the record
@@ -136,7 +137,7 @@ namespace Car_Testing
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
-            TestItem.CustomerID = 18;
+            TestItem.CustomerID = 25;
             TestItem.CustomerFirstName = "Carl";
             TestItem.CustomerLastName = "Pagulayan";
             TestItem.Email = "carlp@gmail.com";
@@ -144,6 +145,7 @@ namespace Car_Testing
             TestItem.Address1 = "10 Bishops Court";
             TestItem.Address2 = "Haverhill";
             TestItem.PostCode = "CB9 9BS";
+            TestItem.CustomerPassword = "abc";
             //set ThisCustomer to the test data
             AllCustomers.ThisCustomer = TestItem;
             //add teh record
@@ -171,7 +173,7 @@ namespace Car_Testing
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
-            TestItem.CustomerID = 18;
+            TestItem.CustomerID = 21;
             TestItem.CustomerFirstName = "Sophie";
             TestItem.CustomerLastName = "Vergara";
             TestItem.Email = "sv@gmail.com";
@@ -179,6 +181,7 @@ namespace Car_Testing
             TestItem.Address1 = "123 ABC Lane";
             TestItem.Address2 = "San Jose";
             TestItem.PostCode = "SJ1 98KL";
+            TestItem.CustomerPassword = "abc";
             //set ThisCustomer to the test data
             AllCustomers.ThisCustomer = TestItem;
             //add the record
@@ -186,7 +189,7 @@ namespace Car_Testing
             //set the primary key of the test data
             TestItem.CustomerID = PrimaryKey;
             //modify the test data
-            TestItem.CustomerID = 18;
+            TestItem.CustomerID = 21;
             TestItem.CustomerFirstName = "Sophie";
             TestItem.CustomerLastName = "Vergara";
             TestItem.Email = "sv@gmail.com";
@@ -194,6 +197,7 @@ namespace Car_Testing
             TestItem.Address1 = "1 Apple Street";
             TestItem.Address2 = "San Jose";
             TestItem.PostCode = "SJ1 9OP";
+            TestItem.CustomerPassword = "yyyy";
             //set the record based on the new test data
             AllCustomers.ThisCustomer = TestItem;
             //update the record
