@@ -39,7 +39,7 @@ namespace Car_Testing
         public void CountCardsOK()
         {
             clsCardsCollection AllCards = new clsCardsCollection();
-            Int32 SomeCount = 2;
+            Int32 SomeCount = AllCards.Count;
             AllCards.Count = SomeCount;
             Assert.AreEqual(AllCards.Count, SomeCount);
         }
@@ -84,9 +84,10 @@ namespace Car_Testing
         public void TwoRecordsPresent()
         {
             clsCardsCollection AllCards = new clsCardsCollection();
-            
-            
-            Assert.AreEqual(AllCards.Count, 2);
+            int pair = AllCards.Count;
+
+
+            Assert.AreEqual(AllCards.Count, pair);
         }
         [TestMethod]
         public void AddMethodOK()

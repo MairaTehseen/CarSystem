@@ -33,7 +33,7 @@ namespace CarClasses
             try
             {
                 //copy the dateAdded value to the DateTemp variable
-                DateTemp = Convert.ToDateTime(ExpireDateYear + ExpireDateMonth);
+                DateTemp = Convert.ToDateTime("01/"+ExpireDateMonth + "/"+ ExpireDateYear);
                 if (DateTemp < DateTime.Now.Date)
                 {
                     //record the error
@@ -54,10 +54,15 @@ namespace CarClasses
                 Error = Error + "The Card Holder may not be blank : ";
             }
             //if the post code is too long
-            if (CardHolder.Length < 6)
+            if (CardHolder.Length < 7)
             {
                 //record the error
                 Error = Error + "The Card Holder must be longer than 6 characters : ";
+            }
+            if (CardHolder.Length > 36)
+            {
+                //record the error
+                Error = Error + "The Card Holder cant be longer than 36 characters : ";
             }
             //is the street blank
             if (CardSecurityNumber.Length == 0)
