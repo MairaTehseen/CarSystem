@@ -4,20 +4,40 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CarClasses;
 
 public partial class PayMenu : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
         if (IsPostBack == false)
-        { 
-            
+        {
+
             DisplayCards();
             DisplayAccounts();
+            DisplayCustomerName();
+        }
+
+
+
+    }
+
+    void DisplayCustomerName()
+    {
+        clsDataConnection DB = new clsDataConnection();
+        clsLoggedin.session = 2;
+        DB.AddParameter("@Session", clsLoggedin.session);
+ int foun = DB.Execute("PaymentFindCustomerName");
+        if (foun == 1)
+        { 
+            username.Text = Convert.ToString(DB.DataTable.Rows[0]["CustomerFirstName"]);
+        }
+        else 
+        {
+            username.Text = "Login to show name";
         }
         
-
-
+        
     }
 
     void DisplayCards()

@@ -69,7 +69,7 @@ namespace CarClasses
             //execute the stored procedure
             DB.Execute("PaymentFindAccount");
             //if one record is found (there should be either one or zero!)
-            if (DB.Count == 1)
+            if (DB.Count > 0)
             {
                 //copy the data from the database to the private data members
                 AccountNr = Convert.ToInt32(DB.DataTable.Rows[0]["AccountNr"]);

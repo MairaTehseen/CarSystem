@@ -14,6 +14,8 @@ namespace CarClasses
             Int32 Index = 0;
             Int32 RecordCount = 0;
             clsDataConnection DB = new clsDataConnection();
+            clsLoggedin.session = 2;
+            DB.AddParameter("@Session", clsLoggedin.session);
             DB.Execute("PaymentCardsSellect");
             RecordCount = DB.Count;
             while (Index<RecordCount)
@@ -97,6 +99,8 @@ namespace CarClasses
         public double Add()
         {
             clsDataConnection DB = new clsDataConnection();
+            clsLoggedin.session = 2;
+            DB.AddParameter("@Session", clsLoggedin.session);
             DB.AddParameter("@Active", mThisCard.Active);
             DB.AddParameter("@CardNr", mThisCard.CardNr);
             DB.AddParameter("@CardHolder", mThisCard.CardHolder);

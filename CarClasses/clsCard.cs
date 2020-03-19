@@ -91,7 +91,7 @@ namespace CarClasses
             //execute the stored procedure
             DB.Execute("PaymentFindCard");
             //if one record is found (there should be either one or zero!)
-            if (DB.Count == 1)
+            if (DB.Count > 0)
             {
                 //copy the data from the database to the private data members
                 Active = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
