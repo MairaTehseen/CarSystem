@@ -1,13 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarBackOffice", "CarBackOffice\CarBackOffice.csproj", "{8EE208BA-A9BE-4A22-99AC-D2DC90C85ACD}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CarFrontOffice", "CarFrontOffice\", "{04CBBAA7-9AF7-4169-983C-BEDDC34EF9B6}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		ProjectReferences = "{2b9e22f7-17c1-42c5-b88f-9992efd35905}|CarClasses.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_52927"
 		Debug.AspNetCompiler.PhysicalPath = "CarFrontOffice\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52927\"
