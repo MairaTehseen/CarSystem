@@ -224,6 +224,118 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             Assert.AreNotEqual(Error, "");
             }
 
+        [TestMethod]
+        public void CardNumberNoMin()
+        {
+            //create an instance of the class we want to create
+            clsCard ACard = new clsCard();
+            //string variable to store the error message
+            string Error = "";
+            //create some test data to pass to the method
+            string CardHolder = "Cezary AAAAA";
+            string CardSecurityNumber = "123";
+            string ExpireDateYear = "2020";
+            string ExpireDateMonth = "11";
+            string CardNr = "8888777799998888"; //this should pass
+            //invoke the method
+            Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
         }
+
+        [TestMethod]
+        public void CardNumberNoMax()
+        {
+            //create an instance of the class we want to create
+            clsCard ACard = new clsCard();
+            //string variable to store the error message
+            string Error = "";
+            string CardHolder = "Cezary AAAAA";
+            string CardSecurityNumber = "123";
+            string ExpireDateYear = "2020";
+            string ExpireDateMonth = "11";
+            //create some test data to pass to the method
+            string CardNr = "8888777799998888"; //this should pass
+            //invoke the method
+            Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void CardNumberNoMaxplusone()
+        {
+            //create an instance of the class we want to create
+            clsCard ACard = new clsCard();
+            //string variable to store the error message
+            string Error = "";
+            string CardHolder = "Cezary AAAAA";
+            string CardSecurityNumber = "123";
+            string ExpireDateYear = "2020";
+            string ExpireDateMonth = "11";
+            //create some test data to pass to the method
+            string CardNr = "88887777999988882"; //this should pass
+            //invoke the method
+            Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void CardNumberNoMaxMinusOne()
+        {
+            //create an instance of the class we want to create
+            clsCard ACard = new clsCard();
+            //string variable to store the error message
+            string Error = "";
+            string CardHolder = "Cezary AAAAA";
+            string CardSecurityNumber = "123";
+            string ExpireDateYear = "2020";
+            string ExpireDateMonth = "11";
+            //create some test data to pass to the method
+            string CardNr = "888877779999888"; //this should pass
+            //invoke the method
+            Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void CardNumberNoExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCard ACard = new clsCard();
+            //string variable to store the error message
+            string Error = "";
+            string CardHolder = "Cezary AAAAA";
+            string CardSecurityNumber = "123";
+            string ExpireDateYear = "2020";
+            string ExpireDateMonth = "11";
+            //create some test data to pass to the method
+            string CardNr = "8888777799998888"; //this should pass
+            CardNr = CardNr.PadRight(500, '1');
+
+            //invoke the method
+            Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void CardNumberNoExtremeMin()
+        {
+            //create an instance of the class we want to create
+            clsCard ACard = new clsCard();
+            //string variable to store the error message
+            string Error = "";
+            string CardHolder = "Cezary AAAAA";
+            string CardSecurityNumber = "123";
+            string ExpireDateYear = "2020";
+            string ExpireDateMonth = "11";
+            //create some test data to pass to the method
+            string CardNr = "8"; //this should pass
+            //invoke the method
+            Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+    }
     }
 

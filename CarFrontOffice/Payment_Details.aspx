@@ -40,7 +40,7 @@
                  <asp:ListItem>Account</asp:ListItem>
              </asp:DropDownList>
                  <asp:Label ID="Label6" runat="server" Text="Choose Payment Method"></asp:Label>
-             <asp:Button style="float:left" ID="Button7" Width="140px" runat="server" Text="Pay" />
+             <asp:Button style="float:left" ID="Button7" Width="140px" runat="server" Text="Pay" OnClick="Button7_Click" />
              
              
         </div>

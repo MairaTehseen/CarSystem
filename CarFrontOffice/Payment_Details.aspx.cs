@@ -121,4 +121,33 @@ public partial class PayMenu : System.Web.UI.Page
             lbl2Error.Text = "Please select a record to delete from the list";
         }
     }
+
+    protected void Button7_Click(object sender, EventArgs e)
+    {
+       if (PaymentMethod.SelectedIndex == 0 )
+        {
+            if (lstCards.SelectedValue != "")
+            {
+                Label6.Text = "Pay by Card";
+            }
+            else if (lstCards.SelectedValue == "")
+            {
+                Label6.Text = "First select your card";
+            }
+        }
+       else if (PaymentMethod.SelectedIndex == 1)
+        {
+            if (ListAccounts.SelectedValue != "")
+            {
+                Label6.Text = "Pay by Account";
+            }
+            else if (ListAccounts.SelectedValue == "")
+            {
+                Label6.Text = "First select your account";
+            }
+        }
+    }
+
+    
+    
 }
