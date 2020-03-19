@@ -42,9 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsCustomer.cs" />
+    <Compile Include="clsAccount.cs" />
+    <Compile Include="clsCard.cs" />
+    <Compile Include="clsAccountsCollection.cs" />
+    <Compile Include="clsCardsCollection.cs" />
     <Compile Include="clsDataConnection.cs" />
     <Compile Include="clsStaff.cs" />
+    <Compile Include="clsLoggedin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="clsUsersAndStaffCollection.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
