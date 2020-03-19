@@ -56,7 +56,7 @@ namespace CarClasses
             if (Bank.Length > 20)
             {
                 //record the error
-                Error = Error + "Card Number must not be longer than 20 chars : ";
+                Error = Error + "Card Number must not be longer tha 20 chars : ";
             }
             //is the town blank
             
