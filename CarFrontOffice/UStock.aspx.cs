@@ -59,7 +59,7 @@ public partial class AStock : System.Web.UI.Page
             CarSystem.ThisStock.Price = Convert.ToInt32(txtPrice.Text);
             CarSystem.ThisStock.StockYear = Convert.ToDateTime(txtStockYear.Text);
             CarSystem.Update();
-            Response.Redirect("Default.aspx");
+            Response.Redirect("StockDefault.aspx");
             return Error;
         }
         else
@@ -86,7 +86,7 @@ public partial class AStock : System.Web.UI.Page
 
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Default.aspx");
+        Response.Redirect("StockDefault.aspx");
     }
 
     protected void btnOK_Click(object sender, EventArgs e)
@@ -95,7 +95,7 @@ public partial class AStock : System.Web.UI.Page
         if (Update()=="")
         { 
         lblError.Text = "Update was successful";
-        Response.Redirect("Default.aspx");
+        Response.Redirect("StockDefault.aspx");
         }else if (Update() != "")
         {
             lblError.Text = Update(); 
