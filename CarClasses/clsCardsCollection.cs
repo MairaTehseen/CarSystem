@@ -111,6 +111,21 @@ namespace CarClasses
 
         }
 
+        public void Edit()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            clsLoggedin.session = 2;
+            DB.AddParameter("@Session", clsLoggedin.session);
+            DB.AddParameter("@Active", mThisCard.Active);
+            DB.AddParameter("@CardNr", mThisCard.CardNr);
+            DB.AddParameter("@CardHolder", mThisCard.CardHolder);
+            DB.AddParameter("@CardSecurityNumber", mThisCard.CardSecurityNumber);
+            DB.AddParameter("@ExpireDateYear", mThisCard.ExpireDateYear);
+            DB.AddParameter("@ExpireDateMonth", mThisCard.ExpireDateMonth);
+            DB.Execute("PaymentCardUpdate");
+
+        }
+
         public void Delete()
         {
             clsDataConnection DB = new clsDataConnection();

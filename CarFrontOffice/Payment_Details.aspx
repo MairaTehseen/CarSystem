@@ -19,7 +19,7 @@
         <div style="width:30%;float:left"><asp:ListBox ID="lstCards" runat="server" Width="100%"></asp:ListBox></div>
 
            <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button1" runat="server" Text="Add new" OnClick="Button1_Click"  /></div>
-             <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button2" runat="server" Text="Edit"  /></div>
+             <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button2" runat="server" Text="Edit" OnClick="Button2_Click"  /></div>
              <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button3" runat="server" Text="Delete" OnClick="Button3_Click"  /></div>
             <div style="width:80px;padding-left:5%;padding-top:10px;float:none"> <asp:Label ID="lbl2Error" runat="server"></asp:Label></div>
             </div>

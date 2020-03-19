@@ -148,6 +148,21 @@ public partial class PayMenu : System.Web.UI.Page
         }
     }
 
-    
-    
+
+
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        double CardNr;
+        if (lstCards.SelectedIndex!= -1)
+        {
+            CardNr = Convert.ToInt64(lstCards.SelectedValue);
+            Session["StockNo"] = CardNr;
+            Response.Redirect("Payment_CardEdit.aspx");
+
+        }else
+        {
+            lbl2Error.Text = "Select Card";
+        }
+    }
 }
