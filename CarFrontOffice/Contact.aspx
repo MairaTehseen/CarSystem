@@ -59,8 +59,15 @@
                         <asp:LinkButton style="text-decoration: none;font-family: 'Britannic Bold'; color:firebrick" ID="LOGOUT" runat="server" OnClick="LOGOUT_Click">Logout</asp:LinkButton>
                         </div>
                     </div>
+
                 </div>
                 </div>
+<p> Auto Car ltd </p>
+        
+        <p> 2020 De Montfort Street </p>
+        <p>University Road</p>
+        <p>Phone: 0123 4567891</p>
+        <p>Support: AutoCarSupport@autocar.com</p>
             </div>
 
 
