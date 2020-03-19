@@ -88,7 +88,7 @@ public partial class PayMenu : System.Web.UI.Page
         {
             CardNr = Convert.ToDouble(lstCards.SelectedValue);
             Session["CardNo"] = CardNr;
-            Response.Redirect("Delete.aspx");
+            Response.Redirect("DeleteCard.aspx");
             //lbl2Error.Text = CardNr.ToString();
         }
         else
