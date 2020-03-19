@@ -32,8 +32,8 @@ public partial class Payment_Card : System.Web.UI.Page
     int Add()
     {
         clsAccountsCollection AccountBook = new clsAccountsCollection();
-
-        String Error = AccountBook.ThisAccount.Valid(txtAccountHolder.Text, txtAccountNumber.Text, BankName.Text);
+        
+        String Error = AccountBook.ThisAccount.Valid(txtAccountHolder.Text, BankName.Text, double.Parse(txtAccountNumber.Text));
 
         if (Error == "")
         {

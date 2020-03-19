@@ -9,7 +9,7 @@ namespace CarClasses
         public string AccountHolder { get; set; }
        
 
-        public string Valid(string AccontHolder, string Bank, string AccountNr)
+        public string Valid(string AccontHolder, string Bank, double AccountNr)
         {
             
             //create a string variable to store the error
@@ -19,12 +19,16 @@ namespace CarClasses
             //if the HouseNo is blank
             
             //if the house no is greater than 6 characters
-            if (AccountNr.Length > 16)
+            if (AccountNr < 999999999999999)
+            {
+                //record the error
+                Error = Error + "Correct card number contain 16 digits : ";
+            }
+            if (AccountNr > 10000000000000000)
             {
                 //record the error
                 Error = Error + "Correct card number contain 16 digits, delete an excess : ";
             }
-            
             //is the post code blank
             if (AccontHolder.Length == 0)
             {
