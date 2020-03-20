@@ -144,7 +144,7 @@ public partial class PayMenu : System.Web.UI.Page
             {
                 if (txtPayFor.SelectedValue != "")
                 {
-                    Label6.Text = "Pay by Card";
+                    Label6.Text = "Pay by Card Successful";
                     Pay();
                 }
                 else if (txtPayFor.SelectedValue == "")
@@ -166,7 +166,7 @@ public partial class PayMenu : System.Web.UI.Page
             {
                 if (txtPayFor.SelectedValue != "")
                 {
-                    Label6.Text = "Pay by Account";
+                    Label6.Text = "Pay by Account Successful";
                     Pay();
                     
                 }
