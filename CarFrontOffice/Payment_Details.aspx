@@ -27,12 +27,12 @@
         <div style="width:30%;float:left"><asp:ListBox ID="ListAccounts" runat="server" Width="100%"></asp:ListBox></div>
 
            <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button4" runat="server" Text="Add new" OnClick="Button4_Click1"  /></div>
-             <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button5" runat="server" Text="Edit"  /></div>
+             <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button5" runat="server" Text="Edit" OnClick="Button5_Click"  /></div>
              <div style="padding-left:5%;padding-top:10px;float:left"> <asp:Button ID="Button6" runat="server" Text="Delete" OnClick="Button6_Click"  /></div>
             <div style="width:80px;padding-left:5%;padding-top:10px;float:none"> <asp:Label ID="Label4" runat="server"></asp:Label></div>
             
         <div style="width:100%;float:left"><asp:Label ID="Label2" runat="server" Text="Pay For"></asp:Label></div>
-         <div style="width:100%;float:left"><asp:ListBox style="float:left" Width="30%" ID="ListBox1" runat="server"></asp:ListBox>
+         <div style="width:100%;float:left"><asp:ListBox style="float:left" Width="30%" ID="txtPayFor" runat="server"></asp:ListBox>
             
              
              <asp:DropDownList style="float:left" ID="PaymentMethod" Width="140px" runat="server">

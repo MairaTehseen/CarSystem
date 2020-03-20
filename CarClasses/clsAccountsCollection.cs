@@ -108,6 +108,18 @@ namespace CarClasses
 
         }
 
+        public void Edit()
+        {
+            clsDataConnection DB = new clsDataConnection();
+
+
+
+            DB.AddParameter("@AccountNr", mThisAccount.AccountNr);
+            DB.AddParameter("@AccountHolder", mThisAccount.AccountHolder);
+            DB.AddParameter("@Bank", mThisAccount.AccountBank);
+            DB.Execute("PaymentAccountUpdate");
+
+        }
         public void Delete()
         {
             clsDataConnection DB = new clsDataConnection();

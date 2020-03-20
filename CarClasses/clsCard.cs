@@ -30,22 +30,57 @@ namespace CarClasses
                 //record the error
                 Error = Error + "Correct card number contain 15 digits, delete an excess : ";
             }
-            try
-            {
-                //copy the dateAdded value to the DateTemp variable
-                DateTemp = Convert.ToDateTime("01/"+ExpireDateMonth + "/"+ ExpireDateYear);
-                if (DateTemp < DateTime.Now.Date)
+            int n;
+            
+            if (Int32.TryParse(ExpireDateMonth, out n) )
+                { 
+                 if (Convert.ToInt32(ExpireDateMonth) < 12 )
+                 {
+                //record the error
+                     
+                }
+                else
+                {
+                    Error = Error + "Wrong Month";
+                }
+                if (Convert.ToInt32(ExpireDateMonth) > 1)
                 {
                     //record the error
-                    Error = Error + "The date cannot be in the past : ";
+
                 }
-                //check to see if the date is greater than today's date
+                else
+                {
+                    Error = Error + "Wrong Month Parse";
+                }
                 
             }
-            catch
+            if (Int32.TryParse(ExpireDateYear, out n))
             {
-                //record the error
-                Error = Error + "The date was not a valid date : ";
+                if (Convert.ToInt32(ExpireDateYear) > 2100)
+                {
+                    //record the error
+                    Error = Error + "Wrong Year";
+                }
+                try
+                {
+                    //copy the dateAdded value to the DateTemp variable
+                    DateTemp = Convert.ToDateTime("01/" + ExpireDateMonth + "/" + ExpireDateYear);
+                    if (DateTemp < DateTime.Now.Date)
+                    {
+                        //record the error
+                        Error = Error + "The date cannot be in the past : ";
+                    }
+                    //check to see if the date is greater than today's date
+
+                }
+                catch
+                {
+                    //record the error
+                    Error = Error + "The date was not a valid date : ";
+                }
+            }else
+            {
+                Error = Error + "Wrong Year Parse";
             }
             //is the post code blank
             if (CardHolder.Length == 0)

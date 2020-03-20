@@ -12,16 +12,26 @@ public partial class PayMenu : System.Web.UI.Page
     {
         if (IsPostBack == false)
         {
-            clsLoggedin.session = 2;
+            Session["Session"] = 2;//to connect with HomePage
+            clsLoggedin.session =  Convert.ToInt32(Session["Session"]); 
             DisplayCards();
             DisplayAccounts();
             DisplayCustomerName();
+            DisplayPayFor();
         }
 
 
 
     }
 
+    void DisplayPayFor()
+    {
+        Session["Payline"] = "321";//to connect with others tables
+        txtPayFor.Items.Add(Convert.ToString(Session["Payline"]));
+        
+       
+
+    }
     void DisplayCustomerName()
     {
         clsDataConnection DB = new clsDataConnection();
@@ -92,7 +102,7 @@ public partial class PayMenu : System.Web.UI.Page
         {
             CardNr = Convert.ToDouble(lstCards.SelectedValue);
             Session["CardNo"] = CardNr;
-            Response.Redirect("Delete.aspx");
+            Response.Redirect("DeleteCard.aspx");
             //lbl2Error.Text = CardNr.ToString();
         }
         else
@@ -132,27 +142,52 @@ public partial class PayMenu : System.Web.UI.Page
         {
             if (lstCards.SelectedValue != "")
             {
-                Label6.Text = "Pay by Card";
+                if (txtPayFor.SelectedValue != "")
+                {
+                    Label6.Text = "Pay by Card";
+                    Pay();
+                }
+                else if (txtPayFor.SelectedValue == "")
+                {
+                    Label6.Text = "First select your target";
+                }
+                
             }
             else if (lstCards.SelectedValue == "")
             {
                 Label6.Text = "First select your card";
             }
+
+            
         }
        else if (PaymentMethod.SelectedIndex == 1)
         {
             if (ListAccounts.SelectedValue != "")
             {
-                Label6.Text = "Pay by Account";
+                if (txtPayFor.SelectedValue != "")
+                {
+                    Label6.Text = "Pay by Account";
+                    Pay();
+                    
+                }
+                else if (txtPayFor.SelectedValue == "")
+                {
+                    Label6.Text = "First select your target";
+                }
             }
             else if (ListAccounts.SelectedValue == "")
             {
                 Label6.Text = "First select your account";
             }
+            
         }
     }
 
-
+    protected void Pay()
+    {
+        Payment pay = new Payment();
+        pay.AddPayment(PaymentMethod.SelectedIndex,Convert.ToInt32(txtPayFor.SelectedValue));
+    }
 
 
     protected void Button2_Click(object sender, EventArgs e)
@@ -167,6 +202,22 @@ public partial class PayMenu : System.Web.UI.Page
         }else
         {
             lbl2Error.Text = "Select Card";
+        }
+    }
+
+    protected void Button5_Click(object sender, EventArgs e)
+    {
+        int AccountNr;
+        if (ListAccounts.SelectedIndex != -1)
+        {
+            AccountNr = Convert.ToInt32(ListAccounts.SelectedValue);
+            Session["AccountNo"] = AccountNr;
+            Response.Redirect("Payment_AccountEdit.aspx");
+
+        }
+        else
+        {
+            lbl2Error.Text = "Select Account";
         }
     }
 }

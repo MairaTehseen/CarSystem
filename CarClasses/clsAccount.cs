@@ -22,12 +22,12 @@ namespace CarClasses
             if (AccountNr > 9999999)
             {
                 //record the error
-                Error = Error + "Correct card number contain 7 digits : ";
+                Error = Error + "Correct card number contain 7 digits, delete an excess : ";
             }
             if (AccountNr < 1000000)
             {
                 //record the error
-                Error = Error + "Correct card number contain 16 digits, delete an excess : ";
+                Error = Error + "Correct card number contain 7 digits : ";
             }
             //is the post code blank
             if (AccontHolder.Length == 0)
