@@ -53,7 +53,7 @@ public partial class PayMenu : System.Web.UI.Page
     void DisplayCards()
     {
 
-    //create an instance of the County Collection
+    //create an instance of the Card Collection
             CarClasses.clsCardsCollection Card = new CarClasses.clsCardsCollection();
     //set the data source to the list of counties in the collection
     lstCards.DataSource = Card.CardsList;
@@ -71,7 +71,7 @@ public partial class PayMenu : System.Web.UI.Page
     void DisplayAccounts()
     {
 
-        //create an instance of the County Collection
+        //create an instance of the Account Collection
         CarClasses.clsAccountsCollection Account = new CarClasses.clsAccountsCollection();
         //set the data source to the list of counties in the collection
         ListAccounts.DataSource = Account.AccountsList;
