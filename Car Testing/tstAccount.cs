@@ -55,7 +55,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
                 //create a string variable to store the result of the validation
                 string Error = "";
                 //create some test data to test the method
-                double AccountNr = 8888777766665555;
+                double AccountNr = 8768945;
             string AccountHolder = "Ceazry Szwalbe";
             string AccountBank = "Lloyds";
             //invoke the method
@@ -72,7 +72,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
                 //create a string variable to store the result of the validation
                 String Error = "";
             //create some test data to test the method
-            double AccountNr = 8888777766665555;
+            double AccountNr = 888877776666555;
             string AccountHolder = "popopo";
             string AccountBank = "Lloyds";
             //invoke the method
@@ -89,7 +89,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
                 //create a string variable to store the result of the validation
                 String Error = "";
             //create some test data to test the method
-            double AccountNr = 8888777766665555;
+            double AccountNr = 8768945;
             string AccountHolder = "1234567";
             string AccountBank = "Lloyds";
             //invoke the method
@@ -106,7 +106,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
                 //create a string variable to store the result of the validation
                 String Error = "";
             //create some test data to test the method
-            double AccountNr = 8888777766665555;
+            double AccountNr = 8768945;
             string AccountHolder = "12345678";
             string AccountBank = "Lloyds";
             //invoke the method
@@ -123,7 +123,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
                 //create a string variable to store the result of the validation
                 String Error = "";
             //create some test data to test the method
-            double AccountNr = 8888777766665555;
+            double AccountNr = 8768945;
             string AccountHolder = "12345678901234567890123456789012345";
             string AccountBank = "Lloyds";
             //invoke the method
@@ -141,7 +141,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
                 //create a string variable to store the result of the validation
                 String Error = "";
             //create some test data to test the method
-            double AccountNr = 8888777766665555;
+            double AccountNr = 8768945;
             string AccountHolder = "123456789012345678901234567890123456";
             string AccountBank = "Lloyds";
             //invoke the method
@@ -158,7 +158,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
                 //create a string variable to store the result of the validation
                 String Error = "";
             //create some test data to test the method
-            double AccountNr = 8888777766665555;
+            double AccountNr = 8768945;
             string AccountHolder = "1234567890123456789012345678901234567";
             string AccountBank = "Lloyds";
             //invoke the method
@@ -175,7 +175,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
                 //create a string variable to store the result of the validation
                 String Error = "";
             //create some test data to test the method
-            double AccountNr = 8888777766665555;
+            double AccountNr = 8768945;
             string AccountHolder = "Ceazry Szwalbe";
             string AccountBank = "Lloyds";
             //invoke the method
@@ -196,7 +196,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             //pad the string with characters
             AccountHolder = AccountHolder.PadRight(500, 'a');
 
-            double AccountNr = 8888777766665555;
+            double AccountNr = 8768945;
             
             string AccountBank = "Lloyds";
             //invoke the method
@@ -213,7 +213,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             //string variable to store the error message
             string Error = "";
             //create some test data to pass to the method
-            double AccountNr = 1000000000000000;
+            double AccountNr = 1000000;
             string AccountHolder = "Ceazry Szwalbe";
             string AccountBank = "Lloyds";
             //invoke the method
@@ -229,7 +229,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             clsAccount AnAccount = new clsAccount();
             //string variable to store the error message
             string Error = "";
-            double AccountNr = 9999999999999999;
+            double AccountNr = 9999999;
             string AccountHolder = "Ceazry Szwalbe";
             string AccountBank = "Lloyds";
             //create some test data to pass to the method
@@ -246,7 +246,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             clsAccount AnAccount = new clsAccount();
             //string variable to store the error message
             string Error = "";
-            double AccountNr = 100000000000000000;
+            double AccountNr = 10000000;
             string AccountHolder = "Ceazry Szwalbe";
             string AccountBank = "Lloyds";
             //invoke the method
@@ -261,7 +261,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             clsAccount AnAccount = new clsAccount();
             //string variable to store the error message
             string Error = "";
-            double AccountNr = 9999999999999998;
+            double AccountNr = 9999998;
             string AccountHolder = "Ceazry Szwalbe";
             string AccountBank = "Lloyds";
             //create some test data to pass to the method

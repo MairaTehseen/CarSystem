@@ -57,7 +57,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
                 //create a string variable to store the result of the validation
                 string Error = "";
                 //create some test data to test the method
-                string CardNr = "1234132413241324";
+                string CardNr = "123413241324132";
             string CardHolder = "Ceazry Szwalbe";
             string CardSecurityNumber = "123";
             string ExpireDateYear = "2020";
@@ -95,7 +95,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
                 //create a string variable to store the result of the validation
                 String Error = "";
             //create some test data to test the method
-            string CardNr = "1234132413241324";
+            string CardNr = "123413241324132";
             string CardHolder = "CezaryS";
             string CardSecurityNumber = "123";
             string ExpireDateYear = "2020";
@@ -118,7 +118,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             string CardSecurityNumber = "123";
             string ExpireDateYear = "2020";
             string ExpireDateMonth = "11";
-            string CardNr = "1234132413241324";
+            string CardNr = "123413241324132";
             //invoke the method
             Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
             //test to see that the result is OK i.e there was no error message returned
@@ -137,7 +137,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             string CardSecurityNumber = "123";
             string ExpireDateYear = "2020";
             string ExpireDateMonth = "11";
-            string CardNr = "1234132413241324";
+            string CardNr = "123413241324132";
             //invoke the method
             Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
             //test to see that the result is OK i.e there was no error message returned
@@ -157,7 +157,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             string CardSecurityNumber = "123";
             string ExpireDateYear = "2020";
             string ExpireDateMonth = "11";
-            string CardNr = "1234132413241324";
+            string CardNr = "123413241324132";
             //invoke the method
             Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
             //test to see that the result is OK i.e there was no error message returned
@@ -195,7 +195,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             string CardSecurityNumber = "123";
             string ExpireDateYear = "2020";
             string ExpireDateMonth = "11";
-            string CardNr = "1234132413241324";
+            string CardNr = "123413241324132";
             //invoke the method
             Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
             //test to see that the result is OK i.e there was no error message returned
@@ -217,7 +217,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             string CardSecurityNumber = "123";
             string ExpireDateYear = "2020";
             string ExpireDateMonth = "11";
-            string CardNr = "1234132413241324";
+            string CardNr = "123413241324132";
             //invoke the method
             Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
             //test to see that the result is NOT OK i.e there should be an error message
@@ -236,7 +236,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             string CardSecurityNumber = "123";
             string ExpireDateYear = "2020";
             string ExpireDateMonth = "11";
-            string CardNr = "8888777799998888"; //this should pass
+            string CardNr = "123413241324132"; //this should pass
             //invoke the method
             Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
             //test to see that the result is correct
@@ -255,7 +255,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             string ExpireDateYear = "2020";
             string ExpireDateMonth = "11";
             //create some test data to pass to the method
-            string CardNr = "8888777799998888"; //this should pass
+            string CardNr = "123413241324132"; //this should pass
             //invoke the method
             Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
             //test to see that the result is correct
@@ -273,7 +273,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             string ExpireDateYear = "2020";
             string ExpireDateMonth = "11";
             //create some test data to pass to the method
-            string CardNr = "88887777999988882"; //this should pass
+            string CardNr = "1234132413241324"; //this should pass
             //invoke the method
             Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
             //test to see that the result is correct
@@ -291,7 +291,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
             string ExpireDateYear = "2020";
             string ExpireDateMonth = "11";
             //create some test data to pass to the method
-            string CardNr = "888877779999888"; //this should pass
+            string CardNr = "12341324132413"; //this should pass
             //invoke the method
             Error = ACard.Valid(CardNr, CardHolder, CardSecurityNumber, ExpireDateYear, ExpireDateMonth);
             //test to see that the result is correct
