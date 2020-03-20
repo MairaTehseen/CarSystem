@@ -14,7 +14,7 @@ namespace CarClasses
             Int32 Index = 0;
             Int32 RecordCount = 0;
             clsDataConnection DB = new clsDataConnection();
-            clsLoggedin.session = 2;
+            
             DB.AddParameter("@Session", clsLoggedin.session);
             DB.Execute("PaymentAccountSellect");
             RecordCount = DB.Count;
@@ -96,7 +96,7 @@ namespace CarClasses
 
         public double Add()
         {
-            clsLoggedin.session = 2;
+            
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@Session", clsLoggedin.session);
             DB.AddParameter("@AccountNr", mThisAccount.AccountNr);

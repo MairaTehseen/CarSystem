@@ -19,16 +19,16 @@ namespace CarClasses
             //create a temporary variable to store date values
             DateTime DateTemp;
             //if the HouseNo is blank
-            if (CardNr.Length < 16)
+            if (CardNr.Length < 15)
             {
                 //record the error
-                Error = Error + "Correct card number contain 16 digits, write full card number : ";
+                Error = Error + "Correct card number contain 15 digits, write full card number : ";
             }
             //if the house no is greater than 6 characters
-            if (CardNr.Length > 16)
+            if (CardNr.Length > 15)
             {
                 //record the error
-                Error = Error + "Correct card number contain 16 digits, delete an excess : ";
+                Error = Error + "Correct card number contain 15 digits, delete an excess : ";
             }
             try
             {

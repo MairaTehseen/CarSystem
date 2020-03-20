@@ -8,12 +8,33 @@ using CarClasses;
 
 public partial class Payment_Card : System.Web.UI.Page
 {
-    Int32 CardNr;
+    double CardNr;
     protected void Page_Load(object sender, EventArgs e)
     {
+        CardNr = Convert.ToDouble(Session["CardNo"]);
+        if (IsPostBack == false)
+        {
+            
+            if (CardNr != -1)
+            {
+                DisplayCard();
+            }
+        }
+    }
+    void DisplayCard()
+    {
+        clsCardsCollection CarSystem = new clsCardsCollection();
+        CarSystem.ThisCard.Find(CardNr);
+        txtCardHolder.Text = CarSystem.ThisCard.CardHolder;
+        txtCardNumber.Text = CarSystem.ThisCard.CardNr.ToString() ;
+        txtYear.Text = CarSystem.ThisCard.ExpireDateYear.ToString();
+        txtMonth.Text = CarSystem.ThisCard.ExpireDateMonth.ToString();
+        txtsecuritycode.Text = CarSystem.ThisCard.CardSecurityNumber.ToString();
+        
+
+
 
     }
-
     protected void Button2_Click(object sender, EventArgs e)
     {
         Response.Redirect("Payment_Details.aspx");
@@ -42,7 +63,7 @@ public partial class Payment_Card : System.Web.UI.Page
         {
             CardBook.ThisCard.Find(CardNr);
             CardBook.ThisCard.CardHolder = txtCardHolder.Text;
-            CardBook.ThisCard.CardNr = Int64.Parse(txtCardNumber.Text);
+            CardBook.ThisCard.CardNr = Double.Parse(txtCardNumber.Text);
             CardBook.ThisCard.ExpireDateMonth = Int32.Parse(txtMonth.Text);
             CardBook.ThisCard.ExpireDateYear = Int32.Parse(txtYear.Text);
             CardBook.ThisCard.CardSecurityNumber = Int32.Parse(txtsecuritycode.Text);

@@ -12,7 +12,7 @@ public partial class PayMenu : System.Web.UI.Page
     {
         if (IsPostBack == false)
         {
-
+            clsLoggedin.session = 2;
             DisplayCards();
             DisplayAccounts();
             DisplayCustomerName();
@@ -25,7 +25,7 @@ public partial class PayMenu : System.Web.UI.Page
     void DisplayCustomerName()
     {
         clsDataConnection DB = new clsDataConnection();
-        clsLoggedin.session = 2;
+        
         DB.AddParameter("@Session", clsLoggedin.session);
  int foun = DB.Execute("PaymentFindCustomerName");
         if (foun == 1)
@@ -49,10 +49,14 @@ public partial class PayMenu : System.Web.UI.Page
     lstCards.DataSource = Card.CardsList;
             //set the name of the primary key
             lstCards.DataValueField = "CardNr";
-            //set the data field to display
-            lstCards.DataTextField = "CardNr";
-            //bind the data to the list
-            lstCards.DataBind();
+
+        //set the data field to display
+        
+        lstCards.DataTextField = "CardHolder";
+        
+        //bind the data to the list
+        lstCards.DataBind();
+        
     }
     void DisplayAccounts()
     {
@@ -64,7 +68,7 @@ public partial class PayMenu : System.Web.UI.Page
         //set the name of the primary key
         ListAccounts.DataValueField = "AccountNr";
         //set the data field to display
-        ListAccounts.DataTextField = "AccountNr";
+        ListAccounts.DataTextField = "AccountHolder";
         //bind the data to the list
         ListAccounts.DataBind();
     }
@@ -156,8 +160,8 @@ public partial class PayMenu : System.Web.UI.Page
         double CardNr;
         if (lstCards.SelectedIndex!= -1)
         {
-            CardNr = Convert.ToInt64(lstCards.SelectedValue);
-            Session["StockNo"] = CardNr;
+            CardNr = Convert.ToDouble(lstCards.SelectedValue);
+            Session["CardNo"] = CardNr;
             Response.Redirect("Payment_CardEdit.aspx");
 
         }else

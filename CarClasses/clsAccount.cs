@@ -19,12 +19,12 @@ namespace CarClasses
             //if the HouseNo is blank
             
             //if the house no is greater than 6 characters
-            if (AccountNr < 999999999999999)
+            if (AccountNr > 9999999)
             {
                 //record the error
-                Error = Error + "Correct card number contain 16 digits : ";
+                Error = Error + "Correct card number contain 7 digits : ";
             }
-            if (AccountNr > 10000000000000000)
+            if (AccountNr < 1000000)
             {
                 //record the error
                 Error = Error + "Correct card number contain 16 digits, delete an excess : ";

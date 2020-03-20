@@ -6,8 +6,8 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
-   <body>
+<body style="background-color:grey">
+   
     <form id="form1" runat="server">   
         <div style="font-size:25px;text-align:center;padding-bottom:40px"><asp:Label ID="Label1" runat="server" Text="Welcome "></asp:Label><div style="font-weight:800;color:forestgreen"><asp:Label ID="username" runat="server" Text="User Name "></asp:Label></div><asp:Label ID="main" runat="server" Text="Deal with your payment
             here"></asp:Label></div>
@@ -47,5 +47,5 @@
     </form>
 </body>
    
-</body>
+
 </html>
